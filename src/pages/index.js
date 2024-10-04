@@ -11,5 +11,3 @@ const IndexPage = () => {
 }
 
 export default IndexPage
-
-export const Head = () => <title>Shri Foods India</title>
