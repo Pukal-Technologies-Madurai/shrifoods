@@ -1,10 +1,27 @@
 import { Link } from "gatsby";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../images/logo.webp";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [submenuOpen, setSubmenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -15,11 +32,11 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="flex items-center justify-between p-6 bg-primary text-white shadow-lg">
+        <nav className={`flex items-center justify-between p-6 bg-primary text-white shadow-lg ${isScrolled ? "fixed top-0 left-0 w-full z-50" : ""}`}>
             <img
                 src={logo}
-                width={50}
-                height={50}
+                width={55}
+                height={55}
                 alt="Logo"
                 className="rounded-full"
             />

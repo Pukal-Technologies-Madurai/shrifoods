@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
 import { ChevronDown, ChevronUp, Zap, Leaf, Beaker, Shield } from "lucide-react";
+import contract_1 from "../images/contract/contract_1.png"
+import contract_5 from "../images/contract/contract_4.png"
 
 const Readytocook = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -38,7 +40,7 @@ const Readytocook = () => {
 
     return (
         <Layout>
-            <div className="bg-gradient-to-b from-yellow-50 to-white">
+            <div className="bg-gradient-to-r from-orange-100 to-yellow-100">
                 <div className="max-w-7xl mx-auto px-4 py-16 text-center md:px-12 lg:px-16 xl:px-20">
                     <h1 className="text-4xl font-bold mb-6 md:text-5xl lg:text-6xl">Our Expertise</h1>
                     <p className="text-lg leading-relaxed mb-12 md:text-xl lg:text-2xl max-w-4xl mx-auto">
@@ -52,7 +54,7 @@ const Readytocook = () => {
                         <div className="flex flex-col md:flex-row items-center justify-between">
                             <div className="md:w-1/2 mb-8 md:mb-0 md:pr-12">
                                 <img
-                                    src="https://www.shrifoodsindia.com/web/image/2772-67ac0e63/Co-extruded-snacks-get-a-big-boost.webp"
+                                    src={contract_1}
                                     alt="Sustainability Initiatives"
                                     className="rounded-lg shadow-xl"
                                 />
@@ -83,7 +85,7 @@ const Readytocook = () => {
                             </div>
                             <div className="md:w-1/2 mb-8 md:mb-0 md:pr-12">
                                 <img
-                                    src="https://www.shrifoodsindia.com/web/image/2775-767ff4e3/IMG_0401.webp"
+                                    src={contract_5}
                                     alt="Sustainability Initiatives"
                                     className="rounded-lg shadow-xl"
                                 />
@@ -97,7 +99,7 @@ const Readytocook = () => {
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                         {processSteps.map((step, index) => (
                             <div key={index} className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
-                                <step.icon className="w-12 h-12 text-yellow-500 mb-4" />
+                                <step.icon className="w-12 h-12 text-orange-500 mb-4" />
                                 <h3 className="text-xl font-semibold mb-4">{index + 1}. {step.title}</h3>
                                 <p className="text-gray-600">{step.description}</p>
                             </div>
@@ -117,9 +119,9 @@ const Readytocook = () => {
                                     >
                                         <span className="text-lg font-medium">{faq.question}</span>
                                         {activeIndex === index ? (
-                                            <ChevronUp className="w-6 h-6 text-yellow-500" />
+                                            <ChevronUp className="w-6 h-6 text-orange-500" />
                                         ) : (
-                                            <ChevronDown className="w-6 h-6 text-yellow-500" />
+                                            <ChevronDown className="w-6 h-6 text-orange-500" />
                                         )}
                                     </button>
                                     {activeIndex === index && (

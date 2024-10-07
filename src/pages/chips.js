@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
 import { ChevronDown, ChevronUp, CheckCircle } from "lucide-react";
+import contract_1 from "../images/contract/contract_1.png"
+import contract_2 from "../images/contract/contract_2.png"
 
 const Chips = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -38,7 +40,7 @@ const Chips = () => {
 
     return (
         <Layout>
-            <div className="bg-gradient-to-b from-blue-100 to-white">
+            <div className="bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100">
                 <div className="container mx-auto px-4 py-12">
                     <h1 className="text-4xl font-bold text-center mb-12">Snacks & Chips Manufacturing</h1>
 
@@ -50,7 +52,7 @@ const Chips = () => {
                                     Food Innovators produces high-quality chips and snacks by sourcing premium ingredients. Our process ensures a crunchy texture and rich flavor, while maintaining sustainability and catering to various dietary preferences.
                                 </p>
                                 <img
-                                    src="https://www.shrifoodsindia.com/web/image/2772-67ac0e63/Co-extruded-snacks-get-a-big-boost.webp"
+                                    src={contract_1}
                                     alt="Snack Manufacturing Process"
                                     className="rounded-lg shadow-lg"
                                 />
@@ -76,7 +78,7 @@ const Chips = () => {
                             <div className="flex flex-col md:flex-row items-center">
                                 <div className="md:w-1/2 mb-8 md:mb-0">
                                     <img
-                                        src="https://www.shrifoodsindia.com/web/image/1313-b3d1d3e7/news-new-co-extruded-snacks-with-twin-fillings.webp"
+                                        src={contract_2}
                                         alt="Custom Chip Solutions"
                                         className="rounded-lg shadow-md"
                                     />
@@ -85,7 +87,7 @@ const Chips = () => {
                                     <p className="text-lg text-gray-700">
                                         Looking for a custom chip flavor or a private label option? Our expert team collaborates with you to develop a unique product tailored to your brand's vision and specific requirements. Whether you're aiming for an innovative taste profile or a distinct packaging design, we ensure your product stands out in the market.
                                     </p>
-                                    <button className="mt-6 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">
+                                    <button className="mt-6 bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition duration-300">
                                         Contact Us for Custom Solutions
                                     </button>
                                 </div>
@@ -99,7 +101,7 @@ const Chips = () => {
                             <div className="flex flex-col md:flex-row items-center">
                                 <div className="md:w-1/2 mb-8 md:mb-0">
                                     <img
-                                        src="https://www.shrifoodsindia.com/web/image/1314-eba51268/Co-extruded-snacks-get-a-big-boost.webp"
+                                        src={contract_1}
                                         alt="Food Innovators Advantage"
                                         className="rounded-lg shadow-md"
                                     />
@@ -135,9 +137,9 @@ const Chips = () => {
                                     >
                                         <span className="text-lg font-medium">{faq.question}</span>
                                         {activeIndex === index ? (
-                                            <ChevronUp className="w-6 h-6 text-blue-600" />
+                                            <ChevronUp className="w-6 h-6 text-orange-600" />
                                         ) : (
-                                            <ChevronDown className="w-6 h-6 text-blue-600" />
+                                            <ChevronDown className="w-6 h-6 text-orange-600" />
                                         )}
                                     </button>
                                     {activeIndex === index && (

@@ -1,6 +1,30 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
 
+import Core1 from "../images/Pop/popped-wheat.png";
+import Core2 from "../images/Pop/popped-barley.png";
+import Core3 from "../images/Pop/popped-pearl-millet.png";
+import Core4 from "../images/Pop/other-millets.png";
+import Core5 from "../images/core/Core Filled snacks.png";
+
+import Bar1 from "../images/core/Protein Bars.png";
+import Bar2 from "../images/core/Cereal Bars.png";
+import Bar3 from "../images/core/energy bar.png";
+import Bar4 from "../images/core/Snack Bar.png";
+
+import Millet1 from "../images/Millet/pearl-millet-puff.png";
+import Millet2 from "../images/Millet/sorghum-puff.png";
+import Millet3 from "../images/Millet/pearl-millet-puffs.png";
+import Millet4 from "../images/Millet/Finger Millet-puff.png";
+import Millet5 from "../images/Millet/Multi Millet Puff.png";
+
+import Corn1 from "../images/ring/Rings Puff.png";
+import Corn2 from "../images/ring/Corn Puff.png";
+import Corn3 from "../images/ring/Stick Puff.png";
+import Corn4 from "../images/ring/Wave Puff.png";
+import Corn5 from "../images/ring/Veg Biryani Puff.png";
+import Corn6 from "../images/ring/Surprise Puff.png";
+
 const TabContent = ({ items }) => (
     <div>
         {items.map((item, index) => (
@@ -47,28 +71,28 @@ const Products = () => {
                     description: "Popped wheat is a delightful snack that combines a light, crunchy texture with a rich, nutty flavor. Made from whole wheat grains that are gently heated until they pop, this snack is not only delicious but also packed with fiber and essential nutrients. It's an ideal choice for those seeking a wholesome, satisfying treat that's both nutritious and flavorful",
                     flavor: "Nutty and crunchy.",
                     nutritional: "High in fiber, vitamins, and minerals like iron and magnesium.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/932-ad23ef72/RCC17216.webp"
+                    imageSrc: Core1
                 },
                 {
                     title: "Popped Barley",
                     description: "Experience the unique taste and texture of popped barley. This wholesome snack is created by heating whole barley grains until they burst, resulting in a light, airy crunch with a distinct earthy, nutty flavor. High in fiber and packed with nutrients, popped barley is a perfect snack for health-conscious individuals who don't want to compromise on taste or texture.",
                     flavor: "Nutty and crunchy.",
                     nutritional: "High in fiber, vitamins, and minerals like iron and magnesium.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1324-f7b59477/RCC17348.webp"
+                    imageSrc: Core2
                 },
                 {
                     title: "Popped Pearl Millet (Bajra)",
                     description: "Popped Pearl Millet is a nutritious and delightful snack, offering a unique combination of a light, airy texture with a mildly sweet and earthy flavor. Made from whole pearl millet grains, known for their rich nutrients profile, these grains are carefully heated until they pop. This process not only enhances their natural flavor but also preserves their high fiber, protein, and antioxidant content. Popped pearl millet is an excellent choice for those seeking a wholesome snack that's both gluten-free and packed with health benefits, making it a perfect fit for a modern, health-conscious lifestyle",
                     flavor: "Nutty and crunchy.",
                     nutritional: "High in fiber, vitamins, and minerals like iron and magnesium.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/806-fd5de8ea/RCC17387.webp"
+                    imageSrc: Core3
                 },
                 {
                     title: "Other All Millets",
                     description: "Popped millets is a delightful snack that combines a light, crunchy texture with a rich, nutty flavor. Made from whole grains that are gently heated until they pop, this snack is not only delicious but also packed with fiber and essential nutrients. It's an ideal choice for those seeking a wholesome, satisfying treat that's both nutritious and flavorful",
                     flavor: "Nutty and crunchy.",
                     nutritional: "High in fiber, vitamins, and minerals like iron and magnesium.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1325-c6a2b1f6/RCC17379.webp"
+                    imageSrc: Core4
                 },
             ]
         },
@@ -77,27 +101,27 @@ const Products = () => {
                 {
                     title: "Pearl Millet Puff (Bajra)",
                     description: "Extruded with finesse using pearl millet flour and a blend of premium grains, these puffs redefine snacking delight. With the ability to take multiple shapes during extrusion, our Bajra Puff offers a playful and customizable experience. Immerse yourself in a world of lightness and crunch, each bite a fusion of flavor and nutrients-rich goodness.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1329-63c86017/RCC17506.webp"
+                    imageSrc: Millet1
                 },
                 {
                     title: "Sorghum Puff (Jowar)",
                     description: "Extruded with precision using premium jowar (sorghum) flour and a blend of carefully selected grains, our Jowar Puff is a delightful twist on traditional snacking. These puffs redefine the art of snacking delight, taking on various shapes during extrusion for a playful and customizable experience. Immerse yourself in a world of airy lightness and satisfying crunch, where each bite is a fusion of distinct flavors and nutrients-rich goodness. Elevate your snacking routine with our Jowar Puff, a wholesome choice that combines quality, creativity, and a burst of health in every delicious puffs",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1331-53044ba3/RCC17503.webp"
+                    imageSrc: Millet2
                 },
                 {
                     title: "Pearl Millet Puff (Bajra)",
                     description: "Extruded with finesse using pearl millet flour and a blend of premium grains, these puffs redefine snacking delight. With the ability to take multiple shapes during extrusion, our Bajra Puff offers a playful and customizable experience. Immerse yourself in a world of lightness and crunch, each bite a fusion of flavor and nutrients-rich goodness.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1330-ca224fd7/RCC17540.webp"
+                    imageSrc: Millet3
                 },
                 {
                     title: "Finger Millet Puff (Ragi)",
                     description: "Extruded with expertise using nutrients-packed ragi (finger millet) flour and a blend of premium grains, our Ragi Puffs redefine snacking excellence. Taking on various enticing shapes during extrusion, these puffs offer a playful and customizable experience for every palate. Immerse yourself in a world of satisfying lightness and crunch, where each bite is a harmonious fusion of flavors and wholesome goodness. Elevate your snacking journey with our Ragi Puffs, a delightful choice that marries quality, innovation, and health in every delicious piece. Savor the perfect balance of taste and nutritions with each uniquely shaped puff.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1329-63c86017/RCC17506.webp"
+                    imageSrc: Millet4
                 },
                 {
                     title: "Multi Millet Puff",
                     description: "Multi Millet Puffs redefine the essence of wholesome snacking. Extruded with expertise and care, these puffs showcase a symphony of textures and flavors. With the ability to take on diverse shapes during extrusion, each bite offers a playful and customizable experience. Immerse yourself in the delightful world of lightness and satisfying crunch, where the fusion of distinct millet flavors and nutrients-packed goodness creates a truly exceptional snacking adventure. Elevate your palate with our Multi Millet Puffs — a celebration of quality, diversity, and health in every delicious and uniquely shaped puff.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/794-a3fc2e78/RCC17638.webp"
+                    imageSrc: Millet5
                 },
             ]
         },
@@ -106,32 +130,32 @@ const Products = () => {
                 {
                     title: "Rings Puff",
                     description: "Delight in the playful and versatile snacking experience with our Rings Puff. Expertly crafted to perfection, these airy and crunchy puffs are a culinary marvel. Created with a blend of premium ingredients, the Round Puff takes on a circular form during extrusion, adding a touch of whimsy to your snacking routine. Immerse yourself in the lightness and satisfying crunch of each perfectly rounded bite. Versatile and customizable, these puffs offer a delightful canvas for your taste buds. Elevate your snacking moments with our Rings Puff — a symphony of shape, texture, and flavor that transforms every bite into a memorable experience.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/822-cc2b7f13/shapes2.webp"
+                    imageSrc: Core1
                 },
                 {
                     title: "Corn Puff",
                     description: "Golden nuggets of delight made from premium corn kernels. Expertly crafted through a meticulous process, these puffs offer a light and crispy texture, creating a snacking sensation like no other. Bursting with the natural sweetness of corn, each bite delivers a satisfying crunch and a burst of flavor. Versatile and timeless, our Corn Puffs stand as a testament to simplicity meeting excellence. Elevate your snacking moments with the pure, irresistible goodness of our Corn Puffs — a timeless treat that never goes out of style.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/821-17383b36/shapes1%20%281%29.webp"
+                    imageSrc: Corn2
                 },
                 {
                     title: "Stick Puff",
                     description: "A slender and satisfying treat that redefines the art of munching. Expertly crafted with precision, these puff has a unique stick shape that enhances the snacking experience. Made from a blend of premium ingredients, each Stick Puff is a testament to quality and creativity. Immerse yourself in the crispiness and delightful crunch of these slender delights. Perfect for on-the-go munching or savoring slowly, our Stick Puff offers a versatile and customizable snacking experience. Elevate your palate with the slender joy of our Stick Puff — a snack that combines innovation, texture, and flavor in every delicious stick.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/824-00b79c90/shapes1.webp"
+                    imageSrc: Corn3
                 },
                 {
                     title: "Wave Puff",
                     description: "A delightful creation that blends artistry and flavor seamlessly. Crafted with precision, these puffs take on a wave-like form during extrusion, creating a visually appealing and uniquely textured snack. Made from a blend of premium ingredients, each Wave Puff offers a playful and satisfying crunch. Immerse yourself in the delightful curves of these waves as they tantalize your taste buds. Versatile and eye-catching, our Wave Puff is not just a snack; it's a snacking experience that combines form, texture, and flavor in perfect harmony. Elevate your snacking routine with the rhythmic joy of our Wave Puff.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/825-a7e6f7ae/shapes3.webp"
+                    imageSrc: Corn4
                 },
                 {
                     title: "Veg Biryani Puff",
                     description: "A culinary delight that brings the essence of aromatic spices and wholesome vegetables in a delightful puff form. Expertly crafted with a medley of premium ingredients, these puffs encapsulate the rich taste of traditional biryani in every bite. Whether you savor the satisfying crunch or the burst of veggie goodness, our Veg Biryani Puff is a symphony of textures and flavors. Elevate your snacking experience with this fusion masterpiece — where the heartiness of biryani meets the convenience of a perfectly crafted puff, creating a snack that is both indulgent and unforgettable.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/826-fb9944e4/shapes4.webp"
+                    imageSrc: Corn5
                 },
                 {
                     title: "Surprise Puff",
                     description: "Savor the medley of flavors with our Mixed Corn Puff — a delightful blend of golden corn goodness in every bite. Crafted with precision and care, these puffs offer a perfect balance of sweet and savory notes. Extruded with a mix of premium corn varieties, each puff delivers a harmonious blend of textures and flavors. Immerse yourself in the light and crispy crunch that defines our Mixed Corn Puff, showcasing the diversity of corn in every mouthful. Versatile and irresistible, this snack is a celebration of corn's natural sweetness and snack-worthy appeal. Elevate your snacking experience with the flavorful symphony of our Mixed Corn Puff.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/823-fb9944e4/shapes4.webp"
+                    imageSrc: Corn6
                 },
             ]
         },
@@ -140,22 +164,22 @@ const Products = () => {
                 {
                     title: "Protein Bars",
                     description: "Engineered for the health-conscious and fitness enthusiasts, our protein bars are a symphony of flavor and nutrition. Each bar is densely packed with high-quality proteins, essential for muscle recovery and sustained energy. They are the perfect blend of taste and health, making them an ideal choice for a post-workout snack or a nutritious treat on the go.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1289-c856fd5d/pexels-ella-olsson-3026806.webp"
+                    imageSrc: Bar1
                 },
                 {
                     title: "Cereal Bars",
                     description: "Embrace the goodness of whole grains with our delightful cereal bars. Crafted for those hectic mornings or as a healthy snack option, these bars are a harmonious mix of crunchy grains, nuts, and fruits, lightly sweetened to perfection. They offer a convenient and tasty way to stay energized and satisfied.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1287-6c440bf4/pexels-polina-tankilevitch-4187496.webp"
+                    imageSrc: Bar2
                 },
                 {
                     title: "Energy Bars",
                     description: "Tailored for the active and the adventurous, our energy bars are formulated to boost stamina and vitality. Packed with a blend of energizing ingredients, these bars are your ideal companion for long workouts, outdoor activities, or as a midday pick-me-up. They are designed to fuel your body and invigorate your spirit.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1286-173bbef1/homemade-protein-bar-1296x728-header.webp"
+                    imageSrc: Bar3
                 },
                 {
                     title: "Snack Bar",
                     description: "Our snack bars are a testament to our versatility and creativity. Available in a myriad of flavors and textures, they cater to every palate and preference. Whether you're craving something sweet, savory, chewy, or crunchy, our snack bars are the perfect solution for any snacking occasion.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1288-c34ffe88/pexels-fox-17763560.webp"
+                    imageSrc: Bar4
                 },
             ]
         },
@@ -166,7 +190,7 @@ const Products = () => {
                     description: "core-filled snacks come in a delightful variety of shapes and sizes, each crafted to provide a unique snacking experience. From classic rounds and squares to fun and whimsical shapes like stars, hearts, or custom designs, our snacks are as enjoyable to look at as they are to eat. This variety in form makes our snacks perfect for different occasions, be it a family snack time, a special event, or a unique product line for your brand.",
                     flavor: "Nutty and crunchy.",
                     nutritional: "High in fiber, vitamins, and minerals like iron and magnesium.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1314-eba51268/Co-extruded-snacks-get-a-big-boost.webp"
+                    imageSrc: Core5
                 },
             ]
         },
@@ -192,7 +216,7 @@ const Products = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-6 md:px-12 lg:px-24 py-8">
+            <div className="bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100 mx-auto px-6 md:px-12 lg:px-24 py-8">
                 <div className="mb-6">
                     <div className="flex justify-center items-center">
                         <nav className="flex flex-wrap">

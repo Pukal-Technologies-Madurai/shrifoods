@@ -1,5 +1,21 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
+import Incubator from "../images/facility/Incubator.png";
+import Distilled from "../images/facility/Distilled Water Maker.png";
+import Muffle from "../images/facility/Muffle Furnace.png";
+import Hot from "../images/facility/Hot Air Oven.png";
+import Technico from "../images/facility/Technico Starch Test.png";
+import Dedicator from "../images/facility/Dedicator.png";
+import HotPlate from "../images/facility/Hot Plate.png";
+import ShelfLife from "../images/facility/Shelf Life Chamber.png";
+import DigitalpH from "../images/facility/Digital pH Meter.png";
+import Microwave from "../images/facility/Microwave.png";
+import Other from "../images/facility/Other Equipment.png";
+
+import Pulverizer from "../images/facility/Pulverizer.png";
+import Chocolate from "../images/facility/Chocolate Melter.png";
+import CoolingUnit from "../images/facility/Chocolate Cooling Unit.png";
+import AirPuff from "../images/facility/Air Puff Gun.png";
 
 const TabContent = ({ items }) => (
     <div className="flex flex-col space-y-12">
@@ -91,7 +107,7 @@ const Facility = () => {
                 {
                     title: "Air Puff Gun",
                     description: "An Air Puff Gun is a specialized tool used in the production of puffed grain snacks. It operates by rapidly heating and pressurizing grains like rice, wheat, or corn, and then releasing them into a lower pressure environment. This sudden change causes the grains to expand or 'puff', creating light, airy snacks. The Air Puff Gun is known for its precision and ability to produce uniformly puffed grains, making it essential for creating a variety of popular snack foods.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/880-cd1bfa0e/airpuffgun.webp"
+                    imageSrc: AirPuff
                 },
                 {
                     title: "Blender",
@@ -101,17 +117,17 @@ const Facility = () => {
                 {
                     title: "Chocolate Cooling Unit",
                     description: "A Chocolate Cooling Unit is a specialized device used in the chocolate production process to solidify and set chocolate after it has been tempered and molded. This unit carefully controls the temperature and environment to ensure the chocolate cools uniformly, preventing the formation of undesirable crystals and preserving the chocolate's smooth texture and glossy appearance. It's an essential tool in achieving the perfect finish and snap in chocolate products.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/883-45b88fbe/cooler.webp"
+                    imageSrc: CoolingUnit
                 },
                 {
                     title: "Chocolate Melter",
                     description: "A Chocolate Melter is a key piece of equipment in chocolate production, designed to gently and evenly melt chocolate to a smooth, workable consistency. It carefully controls the temperature to avoid overheating, ensuring the chocolate retains its flavor and quality. This tool is essential for chocolatiers and confectionery manufacturers, allowing for precise handling and processing of chocolate for various culinary applications.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/885-c3223e40/melter.webp"
+                    imageSrc: Chocolate
                 },
                 {
                     title: "Pulverizer",
                     description: "A pulverizer is to grind, crush, or pulverize various materials into smaller, uniform-sized particles. Commonly used in the food industry, it efficiently processes grains, spices, and other dry ingredients into powders or fine granules. This equipment is essential for achieving consistent texture and size in food products, enhancing their quality and suitability for various culinary applications.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/882-4e7fd848/pulverizer.webp"
+                    imageSrc: Pulverizer
                 },
             ]
         },
@@ -120,57 +136,57 @@ const Facility = () => {
                 {
                     title: "Incubator",
                     description: "Our incubator is a key tool for culturing and examining microorganisms in food samples, playing a vital role in microbiological testing and food safety assurance.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1356-3013d180/download%20%286%29.webp"
+                    imageSrc: Incubator
                 },
                 {
                     title: "Distilled Water Maker",
                     description: "This apparatus guarantees the production of pure water, essential for creating precise and contamination-free solutions in our food analysis.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1334-f2a8fe58/images%20%286%29.webp"
+                    imageSrc: Distilled
                 },
                 {
                     title: "Muffle Furnace",
                     description: "Ideal for determining the ash content in food products, our muffle furnace is indispensable for high-temperature applications in food analysis.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1336-246fc63d/download%20%281%29.webp"
+                    imageSrc: Muffle
                 },
                 {
                     title: "Hot Air Oven",
                     description: "Sterilizing glassware and utensils, our hot air oven ensures a contamination-free environment, critical for accurate and reliable testing.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1345-a50b5aa1/41WiJQNBmxL._AC_UF1000%2C1000_QL80_.webp"
+                    imageSrc: Hot
                 },
                 {
                     title: "Technico Starch Test",
                     description: "Specialized in measuring starch content, this method is fundamental for our quality control processes and nutritional labeling of food products.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1346-2b7e2ee4/412Al9fckuL._AC_UF350%2C350_QL80_.webp"
+                    imageSrc: Technico
                 },
                 {
                     title: "Dedicator",
                     description: "This equipment maintains the optimal humidity level within our lab, safeguarding our sensitive equipment and samples.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1357-35016dd1/desiccant-dehumidifier-500x500.webp"
+                    imageSrc: Dedicator
                 },
                 {
                     title: "Hot Plate",
                     description: "versatile hot plate is crucial for conducting various experiments that require controlled and consistent heating.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1347-1571dceb/download%20%284%29.webp"
+                    imageSrc: HotPlate
                 },
                 {
                     title: "Shelf Life Chamber",
                     description: "This chamber is vital for simulating different environmental conditions, helping us test and determine the shelf life of food products under various scenarios.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1348-07c755a4/download%20%282%29.webp"
+                    imageSrc: ShelfLife
                 },
                 {
                     title: "Digital pH Meter",
                     description: "Digital pH meter is key for measuring the acidity or alkalinity of food products, playing a critical role in our quality control and product development.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1349-0cfc5287/download%20%283%29.webp"
+                    imageSrc: DigitalpH
                 },
                 {
                     title: "Microwave",
                     description: "Aiding in quick heating and thawing of samples, our microwave oven is also used for specific experimental cooking processes.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1352-f961fee8/download%20%285%29.webp"
+                    imageSrc: Microwave
                 },
                 {
                     title: "Other Equipment",
                     description: "In addition to our specialized lab equipment, our food laboratory is also equipped with a variety of essential tools that are vital for our research and daily operations. This includes an efficient Induction Stove, the highly precise Weighing Machine Micron No.2, and an array of smaller, yet indispensable, equipment. From measuring instruments to mixing tools, each item plays a significant role in enhancing our capability to conduct thorough food science experiments and analysis.",
-                    imageSrc: "https://www.shrifoodsindia.com/web/image/1350-ce1d633d/35849.webp"
+                    imageSrc: Other
                 },
             ]
         }
@@ -178,7 +194,7 @@ const Facility = () => {
 
     return (
         <Layout>
-            <div className="container mx-auto px-6 md:px-12 py-12">
+            <div className="bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100 mx-auto px-6 md:px-12 py-12">
                 <h1 className="text-2xl md:text-4xl font-bold text-center mb-8">
                     Our Facilities
                 </h1>

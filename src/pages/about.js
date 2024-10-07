@@ -10,7 +10,7 @@ const TimelineEvent = ({ year, events, isLeft, icon: Icon }) => (
         </div>
         <div className={`order-1 bg-white border border-gray-200 rounded-lg shadow-md w-5/12 px-6 py-4 ${isLeft ? "text-right" : ""}`}>
             <div className={`flex items-center ${isLeft ? "justify-end" : ""} mb-3`}>
-                <Icon className={`w-8 h-8 ${isLeft ? "ml-3" : "mr-3"} text-green-500`} />
+                <Icon className={`w-8 h-8 ${isLeft ? "ml-5" : "mr-5"} text-green-500`} />
                 <h3 className="font-bold text-lg">{events[0]}</h3>
             </div>
             {events.slice(1).map((event, index) => (
@@ -33,21 +33,29 @@ const about = () => {
 
     return (
         <Layout>
-            <div className="py-16 px-8 md:px-16 bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100">
-                <h2 className="text-3xl md:text-4xl font-bold mb-8 text-green-600 text-center">Our Vision</h2>
-                <p className="text-center text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                    To become India's leading provider of innovative, healthy, and delicious snack products, ensuring quality, sustainability, and customer satisfaction.
-                </p>
+            <div className="py-10 px-8 md:px-16 bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100">
+                <div className="border-2 border-primary p-8">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-8 text-green-600 text-center">Our Vision</h2>
+                    <p className="text-center text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                        <span className="text-2xl md:text-3xl font-bold text-orange-600">“</span>
+                        To set the benchmark in delivering premium, nutritious, and innovative value-added millet snack products that satisfy diverse consumers across India.
+                        <span className="text-2xl md:text-3xl font-bold text-orange-600">”</span>
+                    </p>
+                </div>
             </div>
 
-            <div className="py-16 px-8 md:px-16 bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100">
-                <h2 className="text-3xl md:text-4xl font-bold mb-8 text-green-600 text-center">Our Mission</h2>
-                <p className="text-center text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                    To set the benchmark in delivering premium, nutritious, and innovative value-added millet snack products that satisfy diverse consumers across India.
-                </p>
+            <div className="py-10 px-8 md:px-16 bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100">
+                <div className="border-2 border-primary p-8">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-8 text-green-600 text-center">Our Mission</h2>
+                    <p className="text-center text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                        <span className="text-2xl md:text-3xl font-bold text-orange-600">“</span>
+                        To set the benchmark in delivering premium, nutritious, and innovative value-added millet snack products that satisfy diverse consumers across
+                        <span className="text-2xl md:text-3xl font-bold text-orange-600">”</span>
+                    </p>
+                </div>
             </div>
 
-            <div className="py-16 px-8 md:px-16 bg-gradient-to-r from-green-100 via-green-50 to-green-200">
+            <div className="py-16 px-8 md:px-16 bg-gradient-to-r from-orange-100 to-yellow-100">
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 text-green-600 text-center">Our Story</h2>
                 <div className="space-y-6 text-gray-700 leading-relaxed max-w-4xl mx-auto">
                     <p>
@@ -65,7 +73,7 @@ const about = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto py-16 px-4 md:px-8 bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100">
+            <div className="mx-auto py-16 px-4 md:px-8 bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100">
                 <h1 className="text-4xl font-bold mb-12 text-center text-green-600">Our Journey</h1>
                 <div className="relative wrap overflow-hidden p-10 h-full">
                     <div className="border-2 absolute border-opacity-20 border-green-500 h-full" style={{ left: '50%' }}></div>

@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 const Contact = () => {
     return (
         <Layout>
-            <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+            <div className="bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <h1 className="text-4xl font-extrabold text-gray-900 text-center mb-8">Contact Us</h1>
                     <div className="flex flex-col lg:flex-row gap-8">
@@ -18,7 +18,7 @@ const Contact = () => {
                                 <input type="text" placeholder="Company" className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                                 <input type="text" placeholder="Subject" className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" required />
                                 <textarea placeholder="Your message" className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" rows="4" required></textarea>
-                                <button type="submit" className="w-full bg-blue-600 text-white p-3 rounded-md hover:bg-blue-700 transition duration-300 ease-in-out transform hover:-translate-y-1">Send Message</button>
+                                <button type="submit" className="w-full bg-orange-600 text-white p-3 rounded-md hover:bg-orange-700 transition duration-300 ease-in-out transform hover:-translate-y-1">Send Message</button>
                             </form>
                         </div>
 
