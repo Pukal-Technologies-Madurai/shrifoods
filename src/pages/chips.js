@@ -42,13 +42,13 @@ const Chips = () => {
         <Layout>
             <div className="bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100">
                 <div className="container mx-auto px-4 py-12">
-                    <h1 className="text-4xl font-bold text-center mb-12">Snacks & Chips Manufacturing</h1>
+                    <h1 className="text-4xl font-extrabold text-center mb-12 text-green-600">Snacks & Chips Manufacturing</h1>
 
                     <section className="mb-16">
                         <div className="flex flex-col md:flex-row items-center justify-between">
                             <div className="md:w-1/2 mb-8 md:mb-0">
-                                <h2 className="text-3xl font-semibold mb-4">Our Process</h2>
-                                <p className="text-lg text-gray-700 mb-6">
+                                <h2 className="text-3xl font-semibold mb-4 text-green-600">Our Process</h2>
+                                <p className="text-lg text-black mb-6">
                                     Food Innovators produces high-quality chips and snacks by sourcing premium ingredients. Our process ensures a crunchy texture and rich flavor, while maintaining sustainability and catering to various dietary preferences.
                                 </p>
                                 <img
@@ -61,8 +61,8 @@ const Chips = () => {
                                 <div className="grid gap-6">
                                     {["Sourcing Quality Ingredients", "Innovative Flavors", "State-of-the-Art Production", "Rigorous Quality Control"].map((step, index) => (
                                         <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                                            <h3 className="text-xl font-semibold mb-2">{index + 1}. {step}</h3>
-                                            <p className="text-gray-600">
+                                            <h3 className="text-xl font-semibold mb-2 text-green-600">{index + 1}. {step}</h3>
+                                            <p className="text-black">
                                                 Our {step.toLowerCase()} process ensures that every chip meets our high standards for taste and quality.
                                             </p>
                                         </div>
@@ -73,7 +73,7 @@ const Chips = () => {
                     </section>
 
                     <section className="mb-16">
-                        <h2 className="text-3xl font-semibold mb-8 text-center">Custom Solutions</h2>
+                        <h2 className="text-3xl font-semibold mb-8 text-center text-green-600">Custom Solutions</h2>
                         <div className="bg-white p-8 rounded-lg shadow-lg">
                             <div className="flex flex-col md:flex-row items-center">
                                 <div className="md:w-1/2 mb-8 md:mb-0">
@@ -84,10 +84,10 @@ const Chips = () => {
                                     />
                                 </div>
                                 <div className="md:w-1/2 md:pl-12">
-                                    <p className="text-lg text-gray-700">
+                                    <p className="text-lg text-black">
                                         Looking for a custom chip flavor or a private label option? Our expert team collaborates with you to develop a unique product tailored to your brand's vision and specific requirements. Whether you're aiming for an innovative taste profile or a distinct packaging design, we ensure your product stands out in the market.
                                     </p>
-                                    <button className="mt-6 bg-orange-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition duration-300">
+                                    <button className="mt-6 bg-green-600 text-white px-6 py-2 rounded-full hover:bg-orange-700 transition duration-300">
                                         Contact Us for Custom Solutions
                                     </button>
                                 </div>
@@ -96,7 +96,7 @@ const Chips = () => {
                     </section>
 
                     <section className="mb-16">
-                        <h2 className="text-3xl font-semibold mb-8 text-center">Why Choose Food Innovators for Chip Manufacturing?</h2>
+                        <h2 className="text-3xl font-semibold mb-8 text-center text-green-600">Why Choose Food Innovators for Chip Manufacturing?</h2>
                         <div className="bg-white p-8 rounded-lg shadow-lg">
                             <div className="flex flex-col md:flex-row items-center">
                                 <div className="md:w-1/2 mb-8 md:mb-0">
@@ -107,7 +107,7 @@ const Chips = () => {
                                     />
                                 </div>
                                 <div className="md:w-1/2 md:pl-12">
-                                    <p className="text-lg text-gray-700 mb-6">
+                                    <p className="text-lg text-black mb-6">
                                         At Food Innovators, we stand out in the chip manufacturing industry for several reasons:
                                     </p>
                                     <ul className="space-y-4">
@@ -118,7 +118,7 @@ const Chips = () => {
                                             </li>
                                         ))}
                                     </ul>
-                                    <p className="mt-6 text-lg text-gray-700">
+                                    <p className="mt-6 text-lg text-black">
                                         By choosing Food Innovators, you are not only getting top-quality and innovative chips but also supporting a company that prioritizes environmental responsibility.
                                     </p>
                                 </div>
@@ -135,15 +135,15 @@ const Chips = () => {
                                         className="w-full flex justify-between items-center text-left"
                                         onClick={() => toggleAccordion(index)}
                                     >
-                                        <span className="text-lg font-medium">{faq.question}</span>
+                                        <span className="text-lg font-bold">{faq.question}</span>
                                         {activeIndex === index ? (
-                                            <ChevronUp className="w-6 h-6 text-orange-600" />
+                                            <ChevronUp className="w-6 h-6 text-green-600" />
                                         ) : (
-                                            <ChevronDown className="w-6 h-6 text-orange-600" />
+                                            <ChevronDown className="w-6 h-6 text-green-600" />
                                         )}
                                     </button>
                                     {activeIndex === index && (
-                                        <p className="mt-2 text-gray-600">{faq.answer}</p>
+                                        <p className="mt-2 text-black">{faq.answer}</p>
                                     )}
                                 </div>
                             ))}

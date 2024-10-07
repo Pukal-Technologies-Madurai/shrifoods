@@ -18,7 +18,7 @@ import Millet3 from "../images/Millet/pearl-millet-puffs.png";
 import Millet4 from "../images/Millet/Finger Millet-puff.png";
 import Millet5 from "../images/Millet/Multi Millet Puff.png";
 
-// import Corn1 from "../images/ring/Rings Puff.png";
+import Corn1 from "../images/ring/Rings Puff.png";
 import Corn2 from "../images/ring/Corn Puff.png";
 import Corn3 from "../images/ring/Stick Puff.png";
 import Corn4 from "../images/ring/Wave Puff.png";
@@ -48,12 +48,12 @@ const TabContent = ({ items }) => (
                     ) : null}
                 </div>
                 <div className="w-full md:w-1/2 px-4">
-                    <h3 className="text-2xl sm:text-3xl font-semibold mb-2">{item.title}</h3>
+                    <h3 className="text-2xl sm:text-3xl font-semibold mb-2 text-green-600">{item.title}</h3>
                     <p className="text-gray-700 text-base sm:text-lg text-justify mb-4">
                         {item.description}
                     </p>
-                    <h4 className="text-gray-700 font-medium">Flavor: {item.flavor}</h4>
-                    <h4 className="text-gray-700 font-medium">Nutritional Profile: {item.nutritional}</h4>
+                    {/* <h4 className="text-gray-700 font-medium">Flavor: {item.flavor}</h4>
+                    <h4 className="text-gray-700 font-medium">Nutritional Profile: {item.nutritional}</h4> */}
                 </div>
             </div>
         ))}
@@ -129,9 +129,9 @@ const Products = () => {
         corn: {
             items: [
                 {
-                    title: "Rings Puff",
+                    title: "Corn Ring Puff",
                     description: "Delight in the playful and versatile snacking experience with our Rings Puff. Expertly crafted to perfection, these airy and crunchy puffs are a culinary marvel. Created with a blend of premium ingredients, the Round Puff takes on a circular form during extrusion, adding a touch of whimsy to your snacking routine. Immerse yourself in the lightness and satisfying crunch of each perfectly rounded bite. Versatile and customizable, these puffs offer a delightful canvas for your taste buds. Elevate your snacking moments with our Rings Puff — a symphony of shape, texture, and flavor that transforms every bite into a memorable experience.",
-                    imageSrc: Core1
+                    imageSrc: Corn1
                 },
                 {
                     title: "Corn Puff",
@@ -139,22 +139,22 @@ const Products = () => {
                     imageSrc: Corn2
                 },
                 {
-                    title: "Stick Puff",
+                    title: "Corn Stick Puff",
                     description: "A slender and satisfying treat that redefines the art of munching. Expertly crafted with precision, these puff has a unique stick shape that enhances the snacking experience. Made from a blend of premium ingredients, each Stick Puff is a testament to quality and creativity. Immerse yourself in the crispiness and delightful crunch of these slender delights. Perfect for on-the-go munching or savoring slowly, our Stick Puff offers a versatile and customizable snacking experience. Elevate your palate with the slender joy of our Stick Puff — a snack that combines innovation, texture, and flavor in every delicious stick.",
                     imageSrc: Corn3
                 },
                 {
-                    title: "Wave Puff",
+                    title: "Corn Wave Chips",
                     description: "A delightful creation that blends artistry and flavor seamlessly. Crafted with precision, these puffs take on a wave-like form during extrusion, creating a visually appealing and uniquely textured snack. Made from a blend of premium ingredients, each Wave Puff offers a playful and satisfying crunch. Immerse yourself in the delightful curves of these waves as they tantalize your taste buds. Versatile and eye-catching, our Wave Puff is not just a snack; it's a snacking experience that combines form, texture, and flavor in perfect harmony. Elevate your snacking routine with the rhythmic joy of our Wave Puff.",
                     imageSrc: Corn4
                 },
                 {
-                    title: "Veg Biryani Puff",
+                    title: "Corn Veg Biryani Puff",
                     description: "A culinary delight that brings the essence of aromatic spices and wholesome vegetables in a delightful puff form. Expertly crafted with a medley of premium ingredients, these puffs encapsulate the rich taste of traditional biryani in every bite. Whether you savor the satisfying crunch or the burst of veggie goodness, our Veg Biryani Puff is a symphony of textures and flavors. Elevate your snacking experience with this fusion masterpiece — where the heartiness of biryani meets the convenience of a perfectly crafted puff, creating a snack that is both indulgent and unforgettable.",
                     imageSrc: Corn5
                 },
                 {
-                    title: "Surprise Puff",
+                    title: "Corn Multi-Shapes Puff",
                     description: "Savor the medley of flavors with our Mixed Corn Puff — a delightful blend of golden corn goodness in every bite. Crafted with precision and care, these puffs offer a perfect balance of sweet and savory notes. Extruded with a mix of premium corn varieties, each puff delivers a harmonious blend of textures and flavors. Immerse yourself in the light and crispy crunch that defines our Mixed Corn Puff, showcasing the diversity of corn in every mouthful. Versatile and irresistible, this snack is a celebration of corn's natural sweetness and snack-worthy appeal. Elevate your snacking experience with the flavorful symphony of our Mixed Corn Puff.",
                     imageSrc: Corn6
                 },
@@ -188,7 +188,7 @@ const Products = () => {
             items: [
                 {
                     title: "Core Filled snacks",
-                    description: "core-filled snacks come in a delightful variety of shapes and sizes, each crafted to provide a unique snacking experience. From classic rounds and squares to fun and whimsical shapes like stars, hearts, or custom designs, our snacks are as enjoyable to look at as they are to eat. This variety in form makes our snacks perfect for different occasions, be it a family snack time, a special event, or a unique product line for your brand.",
+                    description: "Core-filled snacks come in a delightful variety of shapes and sizes, each crafted to provide a unique snacking experience. From classic rounds and squares to fun and whimsical shapes like stars, hearts, or custom designs, our snacks are as enjoyable to look at as they are to eat. This variety in form makes our snacks perfect for different occasions, be it a family snack time, a special event, or a unique product line for your brand.",
                     flavor: "Nutty and crunchy.",
                     nutritional: "High in fiber, vitamins, and minerals like iron and magnesium.",
                     imageSrc: Core5
@@ -225,7 +225,7 @@ const Products = () => {
                                 <button
                                     key={tab}
                                     className={`mr-4 py-4 px-4 md:px-8 lg:px-16 border-b-2 font-medium text-base sm:text-lg lg:text-2xl ${activeTab === tab
-                                        ? "bg-primary text-white"
+                                        ? "bg-green-600 text-white"
                                         : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
                                         }`}
                                     onClick={() => setActiveTab(tab)}

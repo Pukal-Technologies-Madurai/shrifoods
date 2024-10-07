@@ -41,7 +41,7 @@ const TabContent = ({ items }) => (
                 </div>
                 {/* Right side: Title and Description */}
                 <div className="w-full md:w-1/2 px-4 md:px-8">
-                    <h3 className="text-2xl md:text-3xl font-semibold mb-4">
+                    <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-green-600">
                         {item.title}
                     </h3>
                     <p className="text-gray-700 text-base md:text-lg text-justify">
@@ -195,7 +195,7 @@ const Facility = () => {
     return (
         <Layout>
             <div className="bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100 mx-auto px-6 md:px-12 py-12">
-                <h1 className="text-2xl md:text-4xl font-bold text-center mb-8">
+                <h1 className="text-2xl md:text-4xl font-extrabold text-center text-green-600 mb-8">
                     Our Facilities
                 </h1>
                 {/* Tabs */}
@@ -204,7 +204,7 @@ const Facility = () => {
                         <nav className="flex space-x-4 md:space-x-8">
                             <button
                                 className={`py-2 px-6 text-lg md:text-xl font-semibold rounded-lg focus:outline-none transition ${activeTab === "production"
-                                    ? "bg-primary text-white shadow-lg"
+                                    ? "bg-green-600 text-white shadow-lg"
                                     : "text-gray-600 hover:text-gray-800 hover:bg-gray-100"
                                     }`}
                                 onClick={() => setActiveTab("production")}
@@ -213,7 +213,7 @@ const Facility = () => {
                             </button>
                             <button
                                 className={`py-2 px-6 text-lg md:text-xl font-semibold rounded-lg focus:outline-none transition ${activeTab === "lab"
-                                    ? "bg-primary text-white shadow-lg"
+                                    ? "bg-green-600 text-white shadow-lg"
                                     : "text-gray-600 hover:text-gray-800 hover:bg-gray-100"
                                     }`}
                                 onClick={() => setActiveTab("lab")}

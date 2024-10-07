@@ -42,7 +42,7 @@ const Readytocook = () => {
         <Layout>
             <div className="bg-gradient-to-r from-orange-100 to-yellow-100">
                 <div className="max-w-7xl mx-auto px-4 py-16 text-center md:px-12 lg:px-16 xl:px-20">
-                    <h1 className="text-4xl font-bold mb-6 md:text-5xl lg:text-6xl">Our Expertise</h1>
+                    <h1 className="text-3xl font-bold mb-6 md:text-4xl lg:text-5xl text-green-600">Our Expertise</h1>
                     <p className="text-lg leading-relaxed mb-12 md:text-xl lg:text-2xl max-w-4xl mx-auto">
                         Food Innovators is India's Premier Contract Food Manufacturer, specializing in creating wholesome, healthy Ready-To-Cook, Ready-To-Mix, Ready-To-Eat, and Functional Food Products. With a large portfolio of Ready To Cook Food products available for private label manufacturing and on a contract manufacturing basis, we cater to diverse consumer needs and preferences.
                     </p>
@@ -50,7 +50,7 @@ const Readytocook = () => {
 
                 <section className="bg-yellow-100 py-16">
                     <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16 xl:px-20">
-                        <h2 className="text-3xl font-semibold mb-12 text-center">Ready To Cook Retort Food Manufacturer</h2>
+                        <h2 className="text-3xl font-semibold mb-12 text-center text-green-600">Ready To Cook Retort Food Manufacturer</h2>
                         <div className="flex flex-col md:flex-row items-center justify-between">
                             <div className="md:w-1/2 mb-8 md:mb-0 md:pr-12">
                                 <img
@@ -60,10 +60,10 @@ const Readytocook = () => {
                                 />
                             </div>
                             <div className="md:w-1/2">
-                                <p className="text-lg text-gray-700 mb-6">
+                                <p className="text-lg text-black mb-6">
                                     At Food Innovators, we're dedicated to providing convenient and delicious ready-to-cook products that make meal preparation a breeze. With upward trends in busier lifestyles and rising demand for convenience products, the Ready-to-cook (RTC) food market is booming.
                                 </p>
-                                <p className="text-lg text-gray-700">
+                                <p className="text-lg text-black">
                                     As the Indian middle class witnesses a paradigm shift in lifestyle, particularly in metropolitans, the demand for RTC food products is on the rise, especially among nuclear families and bachelors. Cultural diversities have led to a focus on launching regional RTC products, catering to diverse tastes.
                                 </p>
                             </div>
@@ -73,13 +73,13 @@ const Readytocook = () => {
 
                 <section className="bg-yellow-100 py-16">
                     <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16 xl:px-20">
-                        <h2 className="text-3xl font-semibold mb-12 text-center">Customize RTC Contract Manufacturing Solutions</h2>
+                        <h2 className="text-3xl font-semibold mb-12 text-center text-green-600">Customize RTC Contract Manufacturing Solutions</h2>
                         <div className="flex flex-col md:flex-row items-center justify-between">
                             <div className="md:w-1/2">
-                                <p className="text-lg text-gray-700 mb-6">
+                                <p className="text-lg text-black mb-6">
                                     Your trusted partner in food production excellence, we cater to your every culinary requirement, from Ready-To-Cook delights to Ready-To-Mix marvels, and from Ready-To-Eat treats to Functional Food Products. Our array of services includes not only comprehensive Private Label Food Manufacturing but also Contract Food Manufacturing, meticulously tailored to your distinct needs and aspirations.
                                 </p>
-                                <p className="text-lg text-gray-700">
+                                <p className="text-lg text-black">
                                     Whether you're a burgeoning brand seeking outsourcing solutions or an enterprising chef eager to realize your gastronomic dreams, our adaptable approach ensures a seamless journey from concept to creation. Rely on Food Innovators for a fusion of quality, ingenuity, and efficiency in every delectable morsel, crafted exclusively for you.
                                 </p>
                             </div>
@@ -95,13 +95,13 @@ const Readytocook = () => {
                 </section>
 
                 <section className="max-w-7xl mx-auto px-4 py-16 md:px-12 lg:px-16 xl:px-20">
-                    <h2 className="text-3xl font-semibold mb-12 text-center">Our Process</h2>
+                    <h2 className="text-3xl font-semibold mb-12 text-center text-green-600">Our Process</h2>
                     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                         {processSteps.map((step, index) => (
                             <div key={index} className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
-                                <step.icon className="w-12 h-12 text-orange-500 mb-4" />
+                                <step.icon className="w-12 h-12 text-green-600 mb-4" />
                                 <h3 className="text-xl font-semibold mb-4">{index + 1}. {step.title}</h3>
-                                <p className="text-gray-600">{step.description}</p>
+                                <p className="text-black">{step.description}</p>
                             </div>
                         ))}
                     </div>
@@ -117,16 +117,16 @@ const Readytocook = () => {
                                         className="w-full flex justify-between items-center p-6 text-left"
                                         onClick={() => toggleAccordion(index)}
                                     >
-                                        <span className="text-lg font-medium">{faq.question}</span>
+                                        <span className="text-lg font-bold">{faq.question}</span>
                                         {activeIndex === index ? (
-                                            <ChevronUp className="w-6 h-6 text-orange-500" />
+                                            <ChevronUp className="w-6 h-6 text-green-600" />
                                         ) : (
-                                            <ChevronDown className="w-6 h-6 text-orange-500" />
+                                            <ChevronDown className="w-6 h-6 text-green-600" />
                                         )}
                                     </button>
                                     {activeIndex === index && (
                                         <div className="p-6 bg-gray-50">
-                                            <p className="text-gray-600">{faq.answer}</p>
+                                            <p className="text-black">{faq.answer}</p>
                                         </div>
                                     )}
                                 </div>

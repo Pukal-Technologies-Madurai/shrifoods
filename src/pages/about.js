@@ -36,10 +36,10 @@ const about = () => {
             <div className="py-10 px-8 md:px-16 bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100">
                 <div className="border-2 border-primary p-8">
                     <h2 className="text-3xl md:text-4xl font-bold mb-8 text-green-600 text-center">Our Vision</h2>
-                    <p className="text-center text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                        <span className="text-2xl md:text-3xl font-bold text-orange-600">“</span>
-                        To set the benchmark in delivering premium, nutritious, and innovative value-added millet snack products that satisfy diverse consumers across India.
-                        <span className="text-2xl md:text-3xl font-bold text-orange-600">”</span>
+                    <p className="text-center text-lg md:text-xl text-black leading-relaxed max-w-3xl mx-auto">
+                        <span className="text-2xl md:text-3xl font-bold text-primary">“</span>
+                        To become India's leading provider of innovative, healthy and delicious Snack products ensure quality, Sustainablity and Customer Satistaction.
+                        <span className="text-2xl md:text-3xl font-bold text-primary">”</span>
                     </p>
                 </div>
             </div>
@@ -47,25 +47,25 @@ const about = () => {
             <div className="py-10 px-8 md:px-16 bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100">
                 <div className="border-2 border-primary p-8">
                     <h2 className="text-3xl md:text-4xl font-bold mb-8 text-green-600 text-center">Our Mission</h2>
-                    <p className="text-center text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-                        <span className="text-2xl md:text-3xl font-bold text-orange-600">“</span>
-                        To set the benchmark in delivering premium, nutritious, and innovative value-added millet snack products that satisfy diverse consumers across
-                        <span className="text-2xl md:text-3xl font-bold text-orange-600">”</span>
+                    <p className="text-center text-lg md:text-xl text-black leading-relaxed max-w-3xl mx-auto">
+                        <span className="text-2xl md:text-3xl font-bold text-primary">“</span>
+                        Set the benchmark in delivering premium, nutritions and innovative value added millet that satisfy diverse Consumers across India.
+                        <span className="text-2xl md:text-3xl font-bold text-primary">”</span>
                     </p>
                 </div>
             </div>
 
             <div className="py-16 px-8 md:px-16 bg-gradient-to-r from-orange-100 to-yellow-100">
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 text-green-600 text-center">Our Story</h2>
-                <div className="space-y-6 text-gray-700 leading-relaxed max-w-4xl mx-auto">
+                <div className="space-y-6 text-black leading-relaxed max-w-4xl mx-auto">
                     <p>
-                        Welcome to Shri Food, Madurai – your ultimate destination for innovative and modernistic food product ideas brought to life. Nestled in the heart of the southern temple city of Madurai, a city celebrated not only for its rich historical tapestry but also for its traditional culinary delights, we stand as a beacon of culinary innovation.
+                        Welcome to Shri Foods, your ultimate destination for innovative and modernistic food product ideas brought to life. Nestled in the heart of the southern temple city of Madurai, a city celebrated not only for its rich historical tapestry but also for its traditional culinary delights, we stand as a beacon of culinary innovation.
                     </p>
                     <p>
-                        Madurai's reputation for delectable cuisine made from fresh ingredients is now entering a new era of globalized tastes, and Shri Food is at the forefront of this transformation. Founded in Tamil Nadu, India, with a profound passion for blending traditional food practices with the trends of the modern food industry, our journey began only a few years ago but has quickly made a significant impact.
+                        Madurai's reputation for delectable cuisine made from fresh ingredients is now entering a new era of globalized tastes, and Shri Foods is at the forefront of this transformation. Founded in Tamil Nadu, India, with a profound passion for blending traditional food practices with the trends of the modern food industry, our journey began only a few years ago but has quickly made a significant impact.
                     </p>
                     <p>
-                        At Shri Food, we pride ourselves on producing the highest quality extruder snacks and puffed snacks. Our select range of crops includes corn, millets, cereals, wheat, barley, jowar, and pearl millet, carefully chosen to ensure both health and flavor. Renowned as one of the leading manufacturers of healthy and tasty snacks in South Tamil Nadu, we are dedicated to offering our customers the best of both worlds: the rich heritage of traditional grains and the innovative appeal of modern snack foods.
+                        At Shri Foods, we pride ourselves on producing the highest quality extruder snacks and puffed snacks. Our select range of crops includes corn, millets, cereals, wheat, barley, jowar, and pearl millet, carefully chosen to ensure both health and flavor. Renowned as one of the leading manufacturers of healthy and tasty snacks in South Tamil Nadu, we are dedicated to offering our customers the best of both worlds: the rich heritage of traditional grains and the innovative appeal of modern snack foods.
                     </p>
                     <p>
                         Join us in this delicious journey where tradition meets innovation, and every bite is a testament to our love and dedication to our customers.

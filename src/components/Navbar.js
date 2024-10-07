@@ -110,7 +110,7 @@ const Navbar = () => {
                         </Link>
 
                         {/* Submenu for Mobile */}
-                        <button onClick={toggleSubmenu} className="hover:text-gray-300 transition-colors duration-300 text-lg">
+                        <button onClick={toggleSubmenu} className="hover:text-gray-300 transition-colors duration-300 text-lg -ml-40">
                             Contract
                         </button>
 
