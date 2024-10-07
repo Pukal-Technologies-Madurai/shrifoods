@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className="bg-primary">
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-                <div className="sm:flex sm:items-center sm:justify-between">
+                <div className="sm:flex sm:items-center sm:justify-between py-4">
                     <Link to="/" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
                         <img src={logo} className="h-8" alt="Logo" />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Shri Foods India</span>
@@ -18,7 +18,7 @@ const Footer = () => {
                         <Link to="/contact" className="hover:underline">Contact</Link>
                     </ul>
                 </div>
-                <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                {/* <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" /> */}
                 <span className="block text-sm text-white sm:text-center dark:text-gray-400">© {new Date().getFullYear()} <Link to="/" className="hover:underline">Shri Foods India™</Link>. All Rights Reserved.</span>
             </div>
         </footer>

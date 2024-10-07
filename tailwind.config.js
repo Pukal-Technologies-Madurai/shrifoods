@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./src/pages/**/*.{js,jsx,ts,tsx}",
     "./src/components/**/*.{js,jsx,ts,tsx}",
+    "./src/styles/custom-utilities.css",
   ],
   theme: {
     extend: {
@@ -19,5 +20,8 @@ module.exports = {
     },
   },
   plugins: [],
+  experimental: {
+    applyComplexClasses: true,
+  }
 }
 

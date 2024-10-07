@@ -32,24 +32,15 @@ const TabContent = ({ items }) => (
         {items.map((item, index) => (
             <div key={index} className="mb-8 flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-1/2 mb-4 md:mb-0 md:mr-4">
-                    {item.videoSrc ? (
-                        <iframe
-                            src={item.videoSrc}
-                            className="w-full h-64 sm:h-80 md:h-96 rounded-lg shadow-lg"
-                            allow="autoplay; encrypted-media"
-                            allowFullScreen
-                        />
-                    ) : item.imageSrc ? (
-                        <img
-                            src={item.imageSrc}
-                            alt={item.title}
-                            className="w-full h-56 sm:h-72 md:h-96 rounded-lg shadow-lg object-cover"
-                        />
-                    ) : null}
+                    <img
+                        src={item.imageSrc}
+                        alt={item.title}
+                        className="w-full h-56 sm:h-72 md:h-96 rounded-lg shadow-lg object-cover"
+                    />
                 </div>
-                <div className="w-full md:w-1/2 px-4">
-                    <h3 className="text-2xl sm:text-3xl font-semibold mb-2 text-green-600">{item.title}</h3>
-                    <p className="text-gray-700 text-base sm:text-lg text-justify mb-4">
+                <div className="w-full md:w-1/2 px-8 relative">
+                    <h3 className="absolute -top-48  text-[20px] sm:text-[20px] font-semibold text-green-600">{item.title.toUpperCase()}</h3>
+                    <p className="absolute -top-40 text-gray-700 text-base sm:text-lg text-justify mb-4">
                         {item.description}
                     </p>
                     {/* <h4 className="text-gray-700 font-medium">Flavor: {item.flavor}</h4>
@@ -202,9 +193,9 @@ const Products = () => {
             <div className="bg-green-200 h-auto flex flex-col md:flex-row items-center justify-between px-6 py-8 md:px-12 lg:px-24">
                 <div className="flex-1 mb-6 md:mb-0">
                     <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-4">
-                        Explore a World of Flavors - Unveiling a Diverse Range of Products
+                        Explore a World of Flavors unveiling a Diverse Range of Products
                     </h1>
-                    <button className="bg-black text-white px-6 py-3 text-lg rounded hover:bg-gray-800">
+                    <button className="bg-primary text-white px-6 py-3 text-lg rounded hover:bg-green-600">
                         Talk to us today!
                     </button>
                 </div>
@@ -212,7 +203,7 @@ const Products = () => {
                     <img
                         src={productBack}
                         alt="Product Display"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-lg"
                     />
                 </div>
             </div>
