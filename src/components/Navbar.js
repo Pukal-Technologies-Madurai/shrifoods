@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React, { useEffect, useState } from "react";
-import logo from "../images/logo.webp";
+import logo from "../images/logo.png";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);

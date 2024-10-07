@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
-import logo from "../images/logo.webp";
+import logo from "../images/logo.png";
 
 const Footer = () => {
     return (

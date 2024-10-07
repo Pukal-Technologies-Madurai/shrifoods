@@ -18,12 +18,14 @@ import Millet3 from "../images/Millet/pearl-millet-puffs.png";
 import Millet4 from "../images/Millet/Finger Millet-puff.png";
 import Millet5 from "../images/Millet/Multi Millet Puff.png";
 
-import Corn1 from "../images/ring/Rings Puff.png";
+// import Corn1 from "../images/ring/Rings Puff.png";
 import Corn2 from "../images/ring/Corn Puff.png";
 import Corn3 from "../images/ring/Stick Puff.png";
 import Corn4 from "../images/ring/Wave Puff.png";
 import Corn5 from "../images/ring/Veg Biryani Puff.png";
 import Corn6 from "../images/ring/Surprise Puff.png";
+
+import productBack from "../images/112.png";
 
 const TabContent = ({ items }) => (
     <div>
@@ -33,7 +35,6 @@ const TabContent = ({ items }) => (
                     {item.videoSrc ? (
                         <iframe
                             src={item.videoSrc}
-                            frameBorder="0"
                             className="w-full h-64 sm:h-80 md:h-96 rounded-lg shadow-lg"
                             allow="autoplay; encrypted-media"
                             allowFullScreen
@@ -209,7 +210,7 @@ const Products = () => {
                 </div>
                 <div className="flex-1 h-64 md:h-80 ">
                     <img
-                        src="../static/images/112.webp"
+                        src={productBack}
                         alt="Product Display"
                         className="w-full h-full object-cover"
                     />

@@ -1,5 +1,6 @@
 import React from "react";
 import { navigate } from "gatsby";
+import productBack from "../images/112.png";
 
 const Home = () => {
     return (
@@ -34,7 +35,7 @@ const Home = () => {
             <div className="flex flex-col md:flex-row items-center justify-center px-4 py-12 bg-gradient-to-r from-orange-100 to-yellow-100">
                 <div className="flex-1 mb-4 md:mb-0">
                     <img
-                        src="../static/images/112.webp"
+                        src={productBack}
                         alt="Wholesome Food Products"
                         className="rounded-[50px] shadow-lg w-full"
                     />
