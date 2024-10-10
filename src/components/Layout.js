@@ -6,14 +6,14 @@ import SocialInfo from "./SocialInfo";
 
 const Layout = ({ children }) => {
     return (
-        <div className="">
+        <div className="flex flex-col min-h-screen">
             <Helmet>
                 <title>Shri Foods India</title>
             </Helmet>
             <Navbar />
-            <div className="w-full max-w-screen-xl mx-auto">
+            <main className="flex-grow w-full">
                 {children}
-            </div>
+            </main>
             <SocialInfo />
             <Footer />
         </div>

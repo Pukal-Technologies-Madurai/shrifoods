@@ -5,9 +5,9 @@ import { Mail, Phone, MapPin } from "lucide-react";
 const Contact = () => {
     return (
         <Layout>
-            <div className="bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+            <div className="bg-gradient-to-r from-orange-100 to-yellow-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <h1 className="text-4xl font-extrabold text-green-600 text-center mb-8">Contact Us</h1>
+                    <h1 className="text-4xl font-extrabold text-orange-600 text-center mb-8">Contact Us</h1>
                     <div className="flex flex-col lg:flex-row gap-8">
                         <div className="lg:w-1/2 bg-white rounded-lg shadow-lg p-8">
                             <h2 className="text-2xl font-bold mb-6 text-black">For enquiries, <br />please provide the following details</h2>
@@ -18,7 +18,7 @@ const Contact = () => {
                                 <input type="text" placeholder="Company" className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                                 <input type="text" placeholder="Subject" className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" required />
                                 <textarea placeholder="Your message" className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent" rows="4" required></textarea>
-                                <button type="submit" className="w-full bg-green-600 text-white p-3 rounded-md hover:bg-green-700 transition duration-300 ease-in-out transform hover:-translate-y-1">Send Message</button>
+                                <button type="submit" className="w-full bg-orange-600 text-white p-3 rounded-md hover:bg-orange-700 transition duration-300 ease-in-out transform hover:-translate-y-1">Send Message</button>
                             </form>
                         </div>
 
@@ -27,7 +27,7 @@ const Contact = () => {
                                 <h2 className="text-2xl font-bold mb-6 text-black">Contact Information</h2>
                                 <div className="space-y-4">
                                     <div className="flex items-center">
-                                        <MapPin className="text-green-600 mr-4" />
+                                        <MapPin className="text-orange-600 mr-4" />
                                         <div>
                                             <p className="font-semibold">Shri Foods India</p>
                                             <p>DP.NO.CS 8, SIDCO Industrial Estate,</p>
@@ -36,12 +36,12 @@ const Contact = () => {
                                         </div>
                                     </div>
                                     <div className="flex items-center">
-                                        <Phone className="text-green-600 mr-4" />
+                                        <Phone className="text-orange-600 mr-4" />
                                         <p>+91 90253 16142</p>
                                     </div>
                                     <div className="flex items-center">
-                                        <Mail className="text-green-600 mr-4" />
-                                        <a href="mailto:shrifoodsindia@gmail.com" className="text-green-600 font-bold hover:underline">shrifoodsindia@gmail.com</a>
+                                        <Mail className="text-orange-600 mr-4" />
+                                        <a href="mailto:shrifoodsindia@gmail.com" className="text-orange-600 font-bold hover:underline">shrifoodsindia@gmail.com</a>
                                     </div>
                                 </div>
                             </div>

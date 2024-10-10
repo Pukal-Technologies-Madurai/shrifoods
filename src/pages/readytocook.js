@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Layout from "../components/Layout";
 import { ChevronDown, ChevronUp, Zap, Leaf, Beaker, Shield } from "lucide-react";
 import contract_1 from "../images/contract/contract_1.png"
 import contract_5 from "../images/contract/contract_4.png"
@@ -39,103 +38,111 @@ const Readytocook = () => {
     ];
 
     return (
-        <Layout>
+        <React.Fragment>
             <div className="bg-gradient-to-r from-orange-100 to-yellow-100">
-                <div className="max-w-7xl mx-auto px-4 py-16 text-center md:px-12 lg:px-16 xl:px-20">
-                    <h1 className="text-3xl font-bold mb-6 md:text-4xl lg:text-5xl text-green-600">Our Expertise</h1>
-                    <p className="text-lg leading-relaxed mb-12 md:text-xl lg:text-2xl max-w-4xl mx-auto">
-                        Food Innovators is India's Premier Contract Food Manufacturer, specializing in creating wholesome, healthy Ready-To-Cook, Ready-To-Mix, Ready-To-Eat, and Functional Food Products. With a large portfolio of Ready To Cook Food products available for private label manufacturing and on a contract manufacturing basis, we cater to diverse consumer needs and preferences.
+                <div className="max-w-7xl mx-auto px-4 py-12 text-center md:px-12 lg:px-16 xl:px-20">
+                    <h1 className="text-4xl text-center text-orange-600 mb-6">Our Expertise</h1>
+                    <p className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl text-black text-justify max-w-4xl mx-auto">
+                        Shri Foods is India's Premier Contract Food Manufacturer, specializing in creating wholesome, healthy Ready-To-Cook, Ready-To-Mix, Ready-To-Eat, and Functional Food Products. With a large portfolio of Ready To Cook Food products available for private label manufacturing and on a contract manufacturing basis, we cater to diverse consumer needs and preferences.
                     </p>
                 </div>
 
-                <section className="bg-yellow-100 py-16">
-                    <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16 xl:px-20">
-                        <h2 className="text-3xl font-semibold mb-12 text-center text-green-600">Ready To Cook Retort Food Manufacturer</h2>
-                        <div className="flex flex-col md:flex-row items-center justify-between">
-                            <div className="md:w-1/2 mb-8 md:mb-0 md:pr-12">
-                                <img
-                                    src={contract_1}
-                                    alt="Sustainability Initiatives"
-                                    className="rounded-lg shadow-xl"
-                                />
-                            </div>
-                            <div className="md:w-1/2">
-                                <p className="text-lg text-black mb-6">
-                                    At Food Innovators, we're dedicated to providing convenient and delicious ready-to-cook products that make meal preparation a breeze. With upward trends in busier lifestyles and rising demand for convenience products, the Ready-to-cook (RTC) food market is booming.
-                                </p>
-                                <p className="text-lg text-black">
-                                    As the Indian middle class witnesses a paradigm shift in lifestyle, particularly in metropolitans, the demand for RTC food products is on the rise, especially among nuclear families and bachelors. Cultural diversities have led to a focus on launching regional RTC products, catering to diverse tastes.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section className="bg-yellow-100 py-16">
-                    <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16 xl:px-20">
-                        <h2 className="text-3xl font-semibold mb-12 text-center text-green-600">Customize RTC Contract Manufacturing Solutions</h2>
-                        <div className="flex flex-col md:flex-row items-center justify-between">
-                            <div className="md:w-1/2">
-                                <p className="text-lg text-black mb-6">
-                                    Your trusted partner in food production excellence, we cater to your every culinary requirement, from Ready-To-Cook delights to Ready-To-Mix marvels, and from Ready-To-Eat treats to Functional Food Products. Our array of services includes not only comprehensive Private Label Food Manufacturing but also Contract Food Manufacturing, meticulously tailored to your distinct needs and aspirations.
-                                </p>
-                                <p className="text-lg text-black">
-                                    Whether you're a burgeoning brand seeking outsourcing solutions or an enterprising chef eager to realize your gastronomic dreams, our adaptable approach ensures a seamless journey from concept to creation. Rely on Food Innovators for a fusion of quality, ingenuity, and efficiency in every delectable morsel, crafted exclusively for you.
-                                </p>
-                            </div>
-                            <div className="md:w-1/2 mb-8 md:mb-0 md:pr-12">
-                                <img
-                                    src={contract_5}
-                                    alt="Sustainability Initiatives"
-                                    className="rounded-lg shadow-xl"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section className="max-w-7xl mx-auto px-4 py-16 md:px-12 lg:px-16 xl:px-20">
-                    <h2 className="text-3xl font-semibold mb-12 text-center text-green-600">Our Process</h2>
-                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <section className="max-w-7xl mx-auto px-2 md:px-12 lg:px-16 xl:px-20">
+                    <h1 className="text-4xl text-center text-orange-600 mb-8">Our Solutions</h1>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {processSteps.map((step, index) => (
-                            <div key={index} className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
-                                <step.icon className="w-12 h-12 text-green-600 mb-4" />
-                                <h3 className="text-xl font-semibold mb-4">{index + 1}. {step.title}</h3>
-                                <p className="text-black">{step.description}</p>
+                            <div key={index} className="flex flex-col bg-white p-6 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl">
+                                <div className="flex items-center mb-4">
+                                    <div className="bg-orange-100 p-3 rounded-full mr-4">
+
+                                        <step.icon className="w-6 h-6 text-orange-600" />
+                                    </div>
+                                    <h3 className="text-lg font-semibold text-black">
+                                        {index + 1}. {step.title}
+                                    </h3>
+                                </div>
+                                <p className="text-sm text-black text-justify">{step.description}</p>
                             </div>
                         ))}
                     </div>
                 </section>
 
-                <section className="bg-gray-50 py-16">
-                    <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16 xl:px-20">
-                        <h2 className="text-3xl font-semibold mb-12 text-center">Frequently Asked Questions</h2>
-                        <div className="max-w-3xl mx-auto">
-                            {faqs.map((faq, index) => (
-                                <div key={index} className="mb-6 bg-white rounded-lg shadow-md overflow-hidden">
-                                    <button
-                                        className="w-full flex justify-between items-center p-6 text-left"
-                                        onClick={() => toggleAccordion(index)}
-                                    >
-                                        <span className="text-lg font-bold">{faq.question}</span>
-                                        {activeIndex === index ? (
-                                            <ChevronUp className="w-6 h-6 text-green-600" />
-                                        ) : (
-                                            <ChevronDown className="w-6 h-6 text-green-600" />
-                                        )}
-                                    </button>
-                                    {activeIndex === index && (
-                                        <div className="p-6 bg-gray-50">
-                                            <p className="text-black">{faq.answer}</p>
-                                        </div>
-                                    )}
-                                </div>
-                            ))}
+                <div className="max-w-7xl mx-auto px-4 my-12 md:px-12 lg:px-16 xl:px-20">
+                    <div className="flex flex-col md:flex-row items-center justify-between">
+
+                        <div className="md:w-1/2">
+                            <h1 className="text-xl md:text-2xl lg:text-3xl text-orange-600 mb-6">
+                                Ready To Cook Retort Food Manufacturer
+                            </h1>
+                            <p className="text-xs md:text-base lg:text-lg text-black mb-6 text-justify">
+                                At Shri Foods, we're dedicated to providing convenient and delicious ready-to-cook products that make meal preparation a breeze. With upward trends in busier lifestyles and rising demand for convenience products, the Ready-to-cook (RTC) food market is booming. As the Indian middle class witnesses a paradigm shift in lifestyle, particularly in metropolitans, the demand for RTC food products is on the rise, especially among nuclear families and bachelors. Cultural diversities have led to a focus on launching regional RTC products, catering to diverse tastes.
+                            </p>
+                        </div>
+
+                        <div className="md:w-1/2 mb-8 md:mb-0 md:pl-12">
+                            <img
+                                src={contract_1}
+                                alt="Sustainability Initiatives"
+                                className="rounded-lg shadow-xl"
+                            />
                         </div>
                     </div>
-                </section>
+                </div>
+
+                <div className="max-w-7xl mx-auto px-4 my-12 md:px-12 lg:px-16 xl:px-20">
+                    <div className="flex flex-col md:flex-row items-center justify-between">
+
+                        <div className="md:w-1/2">
+                            <img
+                                src={contract_5}
+                                alt="Sustainability Initiatives"
+                                className="rounded-lg shadow-xl"
+                            />
+                        </div>
+
+                        <div className="md:w-1/2 mb-8 md:mb-0 md:pl-12">
+                            <h1 className="text-xl md:text-2xl lg:text-3xl text-orange-600 mb-6">
+                                Customize RTC Contract Manufacturing Solutions
+                            </h1>
+                            <p className="text-xs md:text-base lg:text-lg text-black mb-6 text-justify">
+                                Your trusted partner in food production excellence, we cater to your every culinary requirement, from Ready-To-Cook delights to Ready-To-Mix marvels, and from Ready-To-Eat treats to Functional Food Products. Our array of services includes not only comprehensive Private Label Food Manufacturing but also Contract Food Manufacturing, meticulously tailored to your distinct needs and aspirations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16 xl:px-20">
+                    <h1 className="text-2xl md:text-4xl text-center text-orange-600 mb-8">
+                        Frequently Asked Questions
+                    </h1>
+                    <div className="max-w-3xl mx-auto">
+                        {faqs.map((faq, index) => (
+                            <div key={index} className="mb-6 bg-white rounded-lg shadow-md overflow-hidden">
+                                <button
+                                    className="w-full flex justify-between items-center p-4 md:p-6 text-left text-xs md:text-base lg:text-lg"
+                                    onClick={() => toggleAccordion(index)}
+                                >
+                                    <span className="font-bold">{faq.question}</span>
+                                    {activeIndex === index ? (
+                                        <ChevronUp className="w-6 h-6 text-orange-600" />
+                                    ) : (
+                                        <ChevronDown className="w-6 h-6 text-orange-600" />
+                                    )}
+                                </button>
+                                <div
+                                    className={`transition-max-height duration-700 ease-in-out overflow-hidden ${activeIndex === index ? 'max-h-screen' : 'max-h-0'
+                                        }`}
+                                >
+                                    <div className="p-4 md:p-6 bg-gray-50 text-xs md:text-base lg:text-lg">
+                                        <p className="text-black">{faq.answer}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
-        </Layout>
+        </React.Fragment>
     )
 }
 

@@ -1,27 +1,26 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
-import Incubator from "../images/facility/Incubator.png";
-import Distilled from "../images/facility/Distilled Water Maker.png";
-import Muffle from "../images/facility/Muffle Furnace.png";
-import Hot from "../images/facility/Hot Air Oven.png";
-import Technico from "../images/facility/Technico Starch Test.png";
-import Dedicator from "../images/facility/Dedicator.png";
-import HotPlate from "../images/facility/Hot Plate.png";
-import ShelfLife from "../images/facility/Shelf Life Chamber.png";
-import DigitalpH from "../images/facility/Digital pH Meter.png";
-import Microwave from "../images/facility/Microwave.png";
-import Other from "../images/facility/Other Equipment.png";
+import Incubator from "../images/facility/Incubator.webp";
+import Distilled from "../images/facility/Distilled Water Maker.webp";
+import Muffle from "../images/facility/Muffle Furnace.webp";
+import Hot from "../images/facility/Hot Air Oven.webp";
+import Technico from "../images/facility/Technico Starch Test.webp";
+import Dedicator from "../images/facility/Dedicator.webp";
+import HotPlate from "../images/facility/Hot Plate.webp";
+import ShelfLife from "../images/facility/Shelf Life Chamber.webp";
+import DigitalpH from "../images/facility/Digital pH Meter.webp";
+import Microwave from "../images/facility/Microwave.webp";
+import Other from "../images/facility/Other Equipment.webp";
 
-import Pulverizer from "../images/facility/Pulverizer.png";
-import Chocolate from "../images/facility/Chocolate Melter.png";
-import CoolingUnit from "../images/facility/Chocolate Cooling Unit.png";
-import AirPuff from "../images/facility/Air Puff Gun.png";
+import Pulverizer from "../images/facility/Pulverizer.webp";
+import Chocolate from "../images/facility/Chocolate Melter.webp";
+import CoolingUnit from "../images/facility/Chocolate Cooling Unit.webp";
+import AirPuff from "../images/facility/Air Puff Gun.webp";
 
 const TabContent = ({ items }) => (
-    <div className="flex flex-col space-y-12">
+    <div className="flex flex-col space-y-12 items-center">
         {items.map((item, index) => (
-            <div key={index} className="flex flex-col md:flex-row items-center">
-                {/* Left side: Video or Image */}
+            <div key={index} className="flex flex-col md:flex-row items-center justify-center max-w-4xl w-full">
                 <div className="w-full md:w-1/2 mb-4 md:mb-0">
                     {item.videoSrc ? (
                         <iframe
@@ -35,16 +34,16 @@ const TabContent = ({ items }) => (
                         <img
                             src={item.imageSrc}
                             alt={item.title}
-                            className="w-full h-64 rounded-lg shadow-lg object-contain"
+                            className="w-full h-64 rounded-lg shadow-lg object-contain bg-white"
                         />
                     ) : null}
                 </div>
-                {/* Right side: Title and Description */}
+
                 <div className="w-full md:w-1/2 px-4 md:px-8">
-                    <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-green-600">
-                        {item.title}
+                    <h3 className="text-xl md:text-2xl font-semibold mb-2 text-orange-600">
+                        {item.title.toUpperCase()}
                     </h3>
-                    <p className="text-gray-700 text-base md:text-lg text-justify">
+                    <p className="text-xs md:text-sm text-black text-justify">
                         {item.description}
                     </p>
                 </div>
@@ -194,34 +193,32 @@ const Facility = () => {
 
     return (
         <Layout>
-            <div className="bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100 mx-auto px-6 md:px-12 py-12">
-                <h1 className="text-2xl md:text-4xl font-extrabold text-center text-green-600 mb-8">
+            <div className="bg-gradient-to-r from-orange-100 to-yellow-100 mx-auto px-6 md:px-12 py-12">
+                <h1 className="text-2xl md:text-4xl font-extrabold text-center text-orange-600 mb-8">
                     Our Facilities
                 </h1>
                 {/* Tabs */}
-                <div className="mb-8">
-                    <div className="flex justify-center">
-                        <nav className="flex space-x-4 md:space-x-8">
-                            <button
-                                className={`py-2 px-6 text-lg md:text-xl font-semibold rounded-lg focus:outline-none transition ${activeTab === "production"
-                                    ? "bg-green-600 text-white shadow-lg"
-                                    : "text-gray-600 hover:text-gray-800 hover:bg-gray-100"
-                                    }`}
-                                onClick={() => setActiveTab("production")}
-                            >
-                                Production Equipment
-                            </button>
-                            <button
-                                className={`py-2 px-6 text-lg md:text-xl font-semibold rounded-lg focus:outline-none transition ${activeTab === "lab"
-                                    ? "bg-green-600 text-white shadow-lg"
-                                    : "text-gray-600 hover:text-gray-800 hover:bg-gray-100"
-                                    }`}
-                                onClick={() => setActiveTab("lab")}
-                            >
-                                Lab Equipment
-                            </button>
-                        </nav>
-                    </div>
+                <div className="mb-8 flex justify-center">
+                    <nav className="flex space-x-4 md:space-x-8">
+                        <button
+                            className={`mr-4 py-2 px-3 md:px-6 lg:px-12 border-b-2 rounded-2xl font-bold text-xs sm:text-sm lg:text-base ${activeTab === "production"
+                                ? "bg-orange-600 text-white shadow-lg"
+                                : "border-transparent text-black hover:text-gray-700 hover:border-gray-300"
+                                }`}
+                            onClick={() => setActiveTab("production")}
+                        >
+                            Production Equipment
+                        </button>
+                        <button
+                            className={`mr-4 py-2 px-3 md:px-6 lg:px-12 border-b-2 rounded-2xl font-bold text-xs sm:text-sm lg:text-base ${activeTab === "lab"
+                                ? "bg-orange-600 text-white shadow-lg"
+                                : "border-transparent text-black hover:text-gray-700 hover:border-gray-300"
+                                }`}
+                            onClick={() => setActiveTab("lab")}
+                        >
+                            Lab Equipment
+                        </button>
+                    </nav>
                 </div>
 
                 {/* Tab Content */}

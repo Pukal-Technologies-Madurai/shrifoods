@@ -1,22 +1,21 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
 
-import Core1 from "../images/Pop/popped-wheat.png";
-import Core2 from "../images/Pop/popped-barley.png";
-import Core3 from "../images/Pop/popped-pearl-millet.png";
-import Core4 from "../images/Pop/other-millets.png";
-import Core5 from "../images/core/Core Filled snacks.png";
+import Core1 from "../images/Pop/popped-wheat.jpg";
+import Core2 from "../images/Pop/popped-barley.jpg";
+import Core3 from "../images/Pop/popped-pearl-millet.jpg";
+import Core4 from "../images/Pop/other-millets.webp";
+import Core5 from "../images/core/Core Filled snacks.webp";
 
-import Bar1 from "../images/core/Protein Bars.png";
-import Bar2 from "../images/core/Cereal Bars.png";
-import Bar3 from "../images/core/energy bar.png";
-import Bar4 from "../images/core/Snack Bar.png";
+import Bar1 from "../images/core/Protein Bars.webp";
+import Bar2 from "../images/core/Cereal Bars.webp";
+import Bar3 from "../images/core/energy bar.webp";
+import Bar4 from "../images/core/Snack Bar.webp";
 
-import Millet1 from "../images/Millet/pearl-millet-puff.png";
-import Millet2 from "../images/Millet/sorghum-puff.png";
-import Millet3 from "../images/Millet/pearl-millet-puffs.png";
-import Millet4 from "../images/Millet/Finger Millet-puff.png";
-import Millet5 from "../images/Millet/Multi Millet Puff.png";
+import Millet1 from "../images/Millet/pearl-millet-puff.webp";
+import Millet2 from "../images/Millet/sorghum-puff.webp";
+import Millet4 from "../images/Millet/Finger Millet-puff.webp";
+import Millet5 from "../images/Millet/Multi Millet Puff.webp";
 
 import Corn1 from "../images/ring/Rings Puff.png";
 import Corn2 from "../images/ring/Corn Puff.png";
@@ -27,30 +26,55 @@ import Corn6 from "../images/ring/Surprise Puff.png";
 
 import productBack from "../images/112.png";
 
-const TabContent = ({ items }) => (
-    <div>
-        {items.map((item, index) => (
-            <div key={index} className="mb-8 flex flex-col md:flex-row items-center">
-                <div className="w-full md:w-1/2 mb-4 md:mb-0 md:mr-4">
-                    <img
-                        src={item.imageSrc}
-                        alt={item.title}
-                        className="w-full h-56 sm:h-72 md:h-96 rounded-lg shadow-lg object-cover"
-                    />
-                </div>
-                <div className="w-full md:w-1/2 px-8 relative">
-                    <h3 className="absolute -top-48  text-[20px] sm:text-[20px] font-semibold text-green-600">{item.title.toUpperCase()}</h3>
-                    <p className="absolute -top-40 text-gray-700 text-base sm:text-lg text-justify mb-4">
-                        {item.description}
-                    </p>
-                    {/* <h4 className="text-gray-700 font-medium">Flavor: {item.flavor}</h4>
-                    <h4 className="text-gray-700 font-medium">Nutritional Profile: {item.nutritional}</h4> */}
-                </div>
-            </div>
-        ))}
-    </div>
-);
+const TabContent = ({ items }) => {
+    const [expandedItems, setExpandedItems] = useState({});
 
+    const toggleExpand = (index) => {
+        setExpandedItems((prev) => ({
+            ...prev,
+            [index]: !prev[index],
+        }));
+    };
+
+    const maxDescriptionLength = 300;
+
+    return (
+        <div className="w-full max-w-screen-lg mx-auto">
+            {items.map((item, index) => (
+                <div key={index} className="mb-8 flex flex-col md:flex-row items-center relative">
+                    <div className="w-full md:w-1/2 mb-4 md:mb-0 md:mr-4">
+                        <img
+                            src={item.imageSrc}
+                            alt={item.title}
+                            className={`w-full h-auto max-h-96 bg-white rounded-lg shadow-lg ${[Corn1, Corn2, Corn3, Corn4, Corn5, Corn6, Core1, Core2, Core3].includes(item.imageSrc) ? "object-contain" : "object-cover"
+                                }`}
+                        />
+                    </div>
+                    <div className="w-full md:w-1/2 px-8 relative pt-16">
+                        <h3 className="absolute top-0 left-0 text-[20px] px-8 sm:text-[20px] font-semibold text-orange-600">
+                            {item.title.toUpperCase()}
+                        </h3>
+                        <p className="text-black text-base sm:text-lg text-justify">
+                            {expandedItems[index]
+                                ? item.description
+                                : item.description.length > maxDescriptionLength
+                                    ? `${item.description.substring(0, maxDescriptionLength)}...`
+                                    : item.description}
+                        </p>
+                        {item.description.length > maxDescriptionLength && (
+                            <button
+                                onClick={() => toggleExpand(index)}
+                                className="text-orange-600 font-semibold hover:underline"
+                            >
+                                {expandedItems[index] ? "Show Less" : "Show More"}
+                            </button>
+                        )}
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
+};
 
 const Products = () => {
     const [activeTab, setActiveTab] = useState("popped");
@@ -101,11 +125,6 @@ const Products = () => {
                     imageSrc: Millet2
                 },
                 {
-                    title: "Pearl Millet Puff (Bajra)",
-                    description: "Extruded with finesse using pearl millet flour and a blend of premium grains, these puffs redefine snacking delight. With the ability to take multiple shapes during extrusion, our Bajra Puff offers a playful and customizable experience. Immerse yourself in a world of lightness and crunch, each bite a fusion of flavor and nutrients-rich goodness.",
-                    imageSrc: Millet3
-                },
-                {
                     title: "Finger Millet Puff (Ragi)",
                     description: "Extruded with expertise using nutrients-packed ragi (finger millet) flour and a blend of premium grains, our Ragi Puffs redefine snacking excellence. Taking on various enticing shapes during extrusion, these puffs offer a playful and customizable experience for every palate. Immerse yourself in a world of satisfying lightness and crunch, where each bite is a harmonious fusion of flavors and wholesome goodness. Elevate your snacking journey with our Ragi Puffs, a delightful choice that marries quality, innovation, and health in every delicious piece. Savor the perfect balance of taste and nutritions with each uniquely shaped puff.",
                     imageSrc: Millet4
@@ -147,7 +166,7 @@ const Products = () => {
                 {
                     title: "Corn Multi-Shapes Puff",
                     description: "Savor the medley of flavors with our Mixed Corn Puff — a delightful blend of golden corn goodness in every bite. Crafted with precision and care, these puffs offer a perfect balance of sweet and savory notes. Extruded with a mix of premium corn varieties, each puff delivers a harmonious blend of textures and flavors. Immerse yourself in the light and crispy crunch that defines our Mixed Corn Puff, showcasing the diversity of corn in every mouthful. Versatile and irresistible, this snack is a celebration of corn's natural sweetness and snack-worthy appeal. Elevate your snacking experience with the flavorful symphony of our Mixed Corn Puff.",
-                    imageSrc: Corn6
+                    imageSrc: Corn3
                 },
             ]
         },
@@ -190,44 +209,50 @@ const Products = () => {
 
     return (
         <Layout>
-            <div className="bg-green-200 h-auto flex flex-col md:flex-row items-center justify-between px-6 py-8 md:px-12 lg:px-24">
-                <div className="flex-1 mb-6 md:mb-0">
-                    <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-4">
-                        Explore a World of Flavors unveiling a Diverse Range of Products
-                    </h1>
-                    <button className="bg-primary text-white px-6 py-3 text-lg rounded hover:bg-green-600">
-                        Talk to us today!
-                    </button>
-                </div>
-                <div className="flex-1 h-64 md:h-80 ">
-                    <img
-                        src={productBack}
-                        alt="Product Display"
-                        className="w-full h-full object-cover rounded-lg"
-                    />
-                </div>
-            </div>
-
-            <div className="bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100 mx-auto px-6 md:px-12 lg:px-24 py-8">
-                <div className="mb-6">
-                    <div className="flex justify-center items-center">
-                        <nav className="flex flex-wrap">
-                            {["popped", "millet", "corn", "bars", "core"].map((tab) => (
-                                <button
-                                    key={tab}
-                                    className={`mr-4 py-4 px-4 md:px-8 lg:px-16 border-b-2 font-medium text-base sm:text-lg lg:text-2xl ${activeTab === tab
-                                        ? "bg-green-600 text-white"
-                                        : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-                                        }`}
-                                    onClick={() => setActiveTab(tab)}
-                                >
-                                    {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                                </button>
-                            ))}
-                        </nav>
+            {/* <div className="w-full bg-orange-200">
+                <div className="max-w-screen-xl mx-auto h-auto flex flex-col md:flex-row items-center justify-between px-6 py-8 md:px-12 lg:px-24">
+                    <div className="flex-1 mb-6 md:mb-0">
+                        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-4 text-center md:text-left">
+                            Explore a world of flavours unveiling a diverse range of products
+                        </h1>
+                        <div className="flex justify-center md:justify-start">
+                            <button className="bg-primary text-white px-6 py-3 text-lg rounded hover:bg-orange-600">
+                                Talk to us today!
+                            </button>
+                        </div>
+                    </div>
+                    <div className="flex-1 h-64 md:h-80">
+                        <img
+                            src={productBack}
+                            alt="Product Display"
+                            className="w-full h-full object-cover rounded-lg"
+                        />
                     </div>
                 </div>
-                <TabContent {...tabs[activeTab]} />
+            </div> */}
+
+            <div className="w-full bg-gradient-to-r from-orange-100 to-yellow-100">
+                <div className="max-w-screen-xl mx-auto px-6 md:px-12 lg:px-24 py-8">
+                    <div className="mb-6">
+                        <div className="flex justify-center items-center">
+                            <nav className="flex flex-wrap">
+                                {["popped", "millet", "corn", "bars", "core"].map((tab) => (
+                                    <button
+                                        key={tab}
+                                        className={`py-4 px-2 md:px-8 lg:px-16 border-b-2 rounded-2xl font-medium text-base sm:text-lg lg:text-2xl ${activeTab === tab
+                                            ? "bg-orange-500 text-white"
+                                            : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                                            }`}
+                                        onClick={() => setActiveTab(tab)}
+                                    >
+                                        {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                                    </button>
+                                ))}
+                            </nav>
+                        </div>
+                    </div>
+                    <TabContent {...tabs[activeTab]} />
+                </div>
             </div>
         </Layout>
     )

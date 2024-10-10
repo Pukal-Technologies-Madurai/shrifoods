@@ -5,33 +5,59 @@ import { Link } from "gatsby";
 const SocialInfo = () => {
     return (
         <div className="bg-primary">
-            <div className="w-full max-w-screen-xl h-[15vh] mx-auto  flex flex-col md:flex-row justify-between items-center p-10 md:p-14 shadow-lg">
+            <div className="w-full max-w-screen-xl h-auto mx-auto flex flex-col md:flex-row justify-between items-center py-2 md:py-4 px-4 md:px-8 lg:px-14 shadow-lg space-y-8 md:space-y-0">
 
-                <div className="flex flex-col items-center md:items-start mb-6 md:mb-0 text-center md:text-left">
-                    <p className="font-bold text-lg md:text-lg text-white">for more details</p>
-                    <p className="text-3xl md:text-3xl font-semibold mt-2 text-white">Contact us</p>
+                {/* Contact Us Section */}
+                <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                    <p className="font-semibold text-xs md:text-base lg:text-lg text-white mb-1">
+                        For more details
+                    </p>
+                    <p className="text-base md:text-xl lg:text-2xl font-medium text-white">
+                        Contact us
+                    </p>
                 </div>
 
-                <div className="flex flex-col items-center md:items-start mb-6 md:mb-0 text-center md:text-left">
-                    <p className="font-bold text-lg md:text-xl text-white">Call us</p>
-                    <Link className="text-2xl md:text-2xl mt-2 hover:underline text-white" to="tel:+91 9025316142">
+                {/* Call Us Section */}
+                <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                    <p className="font-semibold text-xs md:text-base lg:text-lg text-white mb-1">
+                        Call us
+                    </p>
+                    <Link
+                        className="text-base md:text-xl lg:text-2xl font-medium text-white hover:underline transition-all"
+                        to="tel:+91 9025316142"
+                    >
                         +91 9025316142
                     </Link>
                 </div>
 
-                <div className="flex flex-col items-center md:items-start mb-6 md:mb-0 text-center md:text-left">
-                    <p className="font-bold text-lg md:text-xl text-white">Send us a message</p>
-                    <Link className="text-2xl md:text-2xl mt-2 hover:underline text-white" to="mailto:shrifoodsindia@gmail.com">
+                {/* Email Us Section */}
+                <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                    <p className="font-semibold text-xs md:text-base lg:text-lg text-white mb-1">
+                        Send us a message
+                    </p>
+                    <Link
+                        className="text-base md:text-xl lg:text-2xl font-medium text-white hover:underline transition-all"
+                        to="mailto:shrifoodsindia@gmail.com"
+                    >
                         shrifoodsindia@gmail.com
                     </Link>
                 </div>
 
+                {/* Follow Us Section */}
                 <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                    <p className="font-bold text-lg md:text-xl text-white">Follow us</p>
+                    <p className="font-semibold text-xs md:text-base lg:text-lg text-white mb-1">
+                        Follow us
+                    </p>
                     <div className="flex flex-row gap-6 mt-2">
-                        <Facebook className="w-8 h-8 cursor-pointer hover:scale-110 transition-transform duration-300 hover:text-blue-500 text-white" />
-                        <Instagram className="w-8 h-8 cursor-pointer hover:scale-110 transition-transform duration-300 hover:text-[#FE0185] text-white" />
-                        <Twitter className="w-8 h-8 cursor-pointer hover:scale-110 transition-transform duration-300 hover:text-[#1DA1F2] text-white" />
+                        <a href="https://www.facebook.com/ShriFoodsMadurai/" target="_blank">
+                            <Facebook className="w-6 h-6 md:w-8 md:h-8 cursor-pointer hover:scale-110 transition-transform duration-300 hover:text-blue-500 text-white" />
+                        </a>
+                        <a href="https://www.instagram.com/shrifoodsindia/" target="_blank">
+                            <Instagram className="w-6 h-6 md:w-8 md:h-8 cursor-pointer hover:scale-110 transition-transform duration-300 hover:text-pink-500 text-white" />
+                        </a>
+                        <a href="https://www.x.com/shrifoodsindia/" target="_blank">
+                            <Twitter className="w-6 h-6 md:w-8 md:h-8 cursor-pointer hover:scale-110 transition-transform duration-300 hover:text-blue-400 text-white" />
+                        </a>
                     </div>
                 </div>
             </div>

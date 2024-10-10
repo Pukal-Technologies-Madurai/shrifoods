@@ -1,194 +1,119 @@
 import { Link } from "gatsby";
 import React, { useEffect, useState } from "react";
+import { Search } from "lucide-react";
 import logo from "../images/logo.png";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [submenuOpen, setSubmenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
+            setIsScrolled(window.scrollY > 50);
         };
 
         window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
+    const toggleMenu = () => setIsOpen(!isOpen);
 
-    const toggleSubmenu = () => {
-        setSubmenuOpen(!submenuOpen);
+    const pageLinks = {
+        "Home": "",
+        "About": "about",
+        "Products": "products",
+        "Facilities": "facility",
+        "Services": "services",
+        "Contract Manufacturing": "manufacturing",
+        "Contact Us": "contact",
     };
 
     return (
         <nav className={`bg-primary text-white shadow-lg ${isScrolled ? "fixed top-0 left-0 w-full z-50" : ""}`}>
-            <div className="w-full max-w-screen-xl mx-auto flex items-center justify-between p-6">
-                <img
-                    src={logo}
-                    width={55}
-                    height={55}
-                    alt="Logo"
-                    className="rounded-full"
-                />
-
-                <div className="hidden md:flex space-x-8">
-                    <Link
-                        to="/"
-                        className="hover:text-gray-300 transition-colors duration-300 text-xl"
-                        activeClassName="border-b-2 border-white"
-                    >
-                        Home
-                    </Link>
-                    <Link
-                        to="/about"
-                        className="hover:text-gray-300 transition-colors duration-300 text-xl"
-                        activeClassName="border-b-2 border-white"
-                    >
-                        About
-                    </Link>
-                    <Link
-                        to="/products"
-                        className="hover:text-gray-300 transition-colors duration-300 text-xl"
-                        activeClassName="border-b-2 border-white"
-                    >
-                        Products
-                    </Link>
-                    <Link
-                        to="/facility"
-                        className="hover:text-gray-300 transition-colors duration-300 text-xl"
-                        activeClassName="border-b-2 border-white"
-                    >
-                        Facilities
-                    </Link>
-                    <Link
-                        to="/services"
-                        className="hover:text-gray-300 transition-colors duration-300 text-xl"
-                        activeClassName="border-b-2 border-white"
-                    >
-                        Services
+            <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center justify-between h-16">
+                    {/* Logo */}
+                    <Link to="/" className="flex-shrink-0">
+                        <img src={logo} width={55} height={55} alt="Logo" className="rounded-full" />
                     </Link>
 
-                    {/* Submenu */}
-                    <div className="relative">
-                        <button onClick={toggleSubmenu} className="hover:text-gray-300 transition-colors duration-300 text-xl">
-                            Contract
-                        </button>
-
-                        {submenuOpen && (
-                            <div className="absolute left-0 mt-2 bg-gray-800 text-white p-3 rounded-lg shadow-lg">
-                                <Link to="/chips" className="block px-4 py-2 hover:bg-gray-700 text-lg rounded transition-colors duration-300">
-                                    Chips Manufacturing
-                                </Link>
-                                <Link to="/energybar" className="block px-4 py-2 hover:bg-gray-700 text-lg rounded transition-colors duration-300">
-                                    Energy Bar Manufacturing
-                                </Link>
-                                <Link to="/readytocook" className="block px-4 py-2 hover:bg-gray-700 text-lg rounded transition-colors duration-300">
-                                    Ready to Cook Products Manufacturing
-                                </Link>
-                            </div>
-                        )}
+                    {/* Desktop Menu */}
+                    <div className="hidden lg:flex space-x-8">
+                        {Object.keys(pageLinks).map((item) => (
+                            <Link
+                                key={item}
+                                to={`/${pageLinks[item]}`}
+                                className="text-sm font-medium hover:text-gray-300 transition-colors duration-200 ease-in-out"
+                                activeClassName="border-b-2 border-white"
+                            >
+                                {item}
+                            </Link>
+                        ))}
                     </div>
 
-                    <Link
-                        to="/contact"
-                        className="hover:text-gray-300 transition-colors duration-300 text-xl"
-                        activeClassName="border-b-2 border-white"
-                    >
-                        Contact Us
-                    </Link>
-                </div>
-
-                <button onClick={toggleMenu} className="md:hidden focus:outline-none">
-                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
-
-                {isOpen && (
-                    <div className="absolute top-16 right-0 w-64 bg-gray-800 text-white p-4 rounded-lg shadow-lg md:hidden z-50">
-                        <div className="flex flex-col space-y-4">
-                            <Link
-                                to="/"
-                                className="hover:text-gray-300 transition-colors duration-300 text-lg"
-                                onClick={toggleMenu}
-                                activeClassName="border-b-2 border-white"
-                            >
-                                Home
-                            </Link>
-                            <Link
-                                to="/about"
-                                className="hover:text-gray-300 transition-colors duration-300 text-lg"
-                                onClick={toggleMenu}
-                                activeClassName="border-b-2 border-white"
-                            >
-                                About
-                            </Link>
-                            <Link
-                                to="/products"
-                                className="hover:text-gray-300 transition-colors duration-300 text-lg"
-                                onClick={toggleMenu}
-                                activeClassName="border-b-2 border-white"
-                            >
-                                Products
-                            </Link>
-                            <Link
-                                to="/facility"
-                                className="hover:text-gray-300 transition-colors duration-300 text-lg"
-                                onClick={toggleMenu}
-                                activeClassName="border-b-2 border-white"
-                            >
-                                Facilities
-                            </Link>
-                            <Link
-                                to="/services"
-                                className="hover:text-gray-300 transition-colors duration-300 text-lg"
-                                onClick={toggleMenu}
-                                activeClassName="border-b-2 border-white"
-                            >
-                                Services
-                            </Link>
-
-                            {/* Submenu for Mobile */}
-                            <button onClick={toggleSubmenu} className="hover:text-gray-300 transition-colors duration-300 text-lg -ml-40">
-                                Contract
-                            </button>
-
-                            {submenuOpen && (
-                                <div className="flex flex-col space-y-2 pl-4">
-                                    <Link to="/chips" className="hover:text-gray-300 text-base" onClick={toggleMenu}>
-                                        Chips Manufacturing
-                                    </Link>
-                                    <Link to="/energybar" className="hover:text-gray-300 text-base" onClick={toggleMenu}>
-                                        Energy Bar Manufacturing
-                                    </Link>
-                                    <Link to="/readytocook" className="hover:text-gray-300 text-base" onClick={toggleMenu}>
-                                        Ready to Cook Products Manufacturing
-                                    </Link>
-                                </div>
-                            )}
-
-                            <Link
-                                to="/contact"
-                                className="hover:text-gray-300 transition-colors duration-300 text-lg"
-                                onClick={toggleMenu}
-                                activeClassName="border-b-2 border-white"
-                            >
-                                Contact Us
-                            </Link>
+                    {/* Search Input - Desktop and Tablet */}
+                    <div className="hidden md:flex items-center">
+                        <div className="relative">
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                className="pl-10 pr-3 py-1 rounded-full bg-gray-100 text-gray-900 focus:outline-none"
+                            />
+                            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <Search className="text-gray-500" size={18} />
+                            </div>
                         </div>
                     </div>
-                )}
+
+                    {/* Mobile menu button */}
+                    <div className="flex lg:hidden">
+                        <button
+                            onClick={toggleMenu}
+                            className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        >
+                            <span className="sr-only">Open main menu</span>
+                            {isOpen ? (
+                                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            ) : (
+                                <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            )}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            {/* Mobile menu, show/hide based on menu state */}
+            <div className={`lg:hidden transition-all duration-300 ease-in-out ${isOpen ? "block" : "hidden"}`}>
+                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    {Object.keys(pageLinks).map((item) => (
+                        <Link
+                            key={item}
+                            to={`/${pageLinks[item]}`}
+                            className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 transition-colors"
+                            activeClassName="bg-gray-900"
+                            onClick={toggleMenu}
+                        >
+                            {item}
+                        </Link>
+                    ))}
+                </div>
+                {/* Search Input - Mobile */}
+                <div className="px-2 pt-2 pb-3">
+                    <div className="relative">
+                        <input
+                            type="text"
+                            placeholder="Search..."
+                            className="w-full pl-10 pr-4 py-2 rounded-full bg-gray-100 text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-primary focus:ring-white"
+                        />
+                        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <Search className="text-gray-500" size={18} />
+                        </div>
+                    </div>
+                </div>
             </div>
         </nav>
     )

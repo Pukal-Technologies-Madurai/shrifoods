@@ -4,8 +4,8 @@ import { Hexagon, Package, Settings } from "lucide-react"
 
 const ServiceCard = ({ Icon, title, description }) => (
     <div className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
-        <Icon className="w-12 h-12 text-green-600 mb-4" />
-        <h3 className="text-xl font-semibold mb-2 text-green-600">{title}</h3>
+        <Icon className="w-12 h-12 text-orange-600 mb-4" />
+        <h3 className="text-xl font-semibold mb-2 text-orange-600">{title}</h3>
         <p className="text-black">{description}</p>
     </div>
 )
@@ -46,9 +46,9 @@ const Services = () => {
 
     return (
         <Layout>
-            <div className="bg-gradient-to-r from-orange-100 via-orange-50 to-yellow-100 py-16 px-4 sm:px-6 lg:px-8">
+            <div className="bg-gradient-to-r from-orange-100 to-yellow-100 py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-4xl font-extrabold text-green-600 text-center mb-12">Our Services</h2>
+                    <h2 className="text-4xl font-extrabold text-orange-600 text-center mb-12">Our Services</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {services.map((service, index) => (
                             <ServiceCard key={index} Icon={service.icon} title={service.title} description={service.description} />
