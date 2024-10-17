@@ -15,7 +15,7 @@ module.exports = {
         "white": "#ffffff",
       },
       fontFamily: {
-        sans: ["Lato", "sans-serif"],
+        sans: ["'Open Sans'", "sans-serif"],
       },
     },
   },
