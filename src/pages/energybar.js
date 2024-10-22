@@ -40,9 +40,9 @@ const Energybar = () => {
         <React.Fragment>
             <div className="bg-gradient-to-r from-orange-100 to-yellow-100">
                 <div className="max-w-7xl mx-auto px-4 py-12 text-center md:px-12 lg:px-16 xl:px-20">
-                    <h1 className="text-4xl text-center text-orange-600 mb-6">Energy Bar Manufacturing</h1>
+                    <h1 className="text-4xl text-center text-orange-600 mb-6">Energy Bars Manufacturing</h1>
                     <p className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl text-black text-justify max-w-4xl mx-auto">
-                        At Shri Foods, our mission is to redefine the energy bar experience, seamlessly blending flavor and functionality. With a commitment to excellence, our Energy Bar Manufacturing Division employs a fusion of culinary artistry and nutritional science to craft bars that transcend mere sustenance. Each bite is a symphony of taste and nourishment, meticulously formulated to fuel your daily adventures. From sourcing premium ingredients to rigorous quality control, we ensure that every bar delivers the perfect balance of taste and nutrition. Trust us to power your journey with bars that ignite your taste buds and energize your body.
+                        At Shri Foods, our mission is to redefine the energy bar experience, seamlessly blending flavour and functionality. With a commitment to excellence, our Energy Bar Manufacturing Division employs a fusion of culinary artistry and nutritional science to craft bars that transcend mere sustenance. Each bite is a symphony of taste and nourishment, meticulously formulated to fuel your daily adventures. From sourcing premium ingredients to rigorous quality control, we ensure that every bar delivers the perfect balance of taste and nutrition. Trust us to power your journey with bars that ignite your taste buds and energize your body.
                     </p>
                 </div>
 
@@ -115,7 +115,7 @@ const Energybar = () => {
                     </div>
                 </div>
 
-                <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16 xl:px-20">
+                {/* <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16 xl:px-20">
                     <h1 className="text-2xl md:text-4xl text-center text-orange-600 mb-8">
                         Frequently Asked Questions
                     </h1>
@@ -144,7 +144,7 @@ const Energybar = () => {
                             </div>
                         ))}
                     </div>
-                </div>
+                </div> */}
             </div>
         </React.Fragment>
     )

@@ -40,9 +40,9 @@ const Chips = () => {
         <React.Fragment>
             <div className="bg-gradient-to-r from-orange-100 to-yellow-100">
                 <div className="max-w-7xl mx-auto px-4 py-12 text-center md:px-12 lg:px-16 xl:px-20">
-                    <h1 className="text-4xl text-center text-orange-600 mb-6">Why Choose Shri foods for Chip Manufacturing?</h1>
+                    <h1 className="text-4xl text-center text-orange-600 mb-6">Why choose Shri Foods?</h1>
                     <p className="text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl text-black text-justify max-w-4xl mx-auto">
-                        At Shri Foods, we stand out in the chip manufacturing industry for several reasons. First, our innovation shines through with the introduction of creative and unique flavors that cater to diverse tastes and preferences. Our commitment to quality is second to none, with rigorous quality control measures ensuring that every product meets the highest standards. Our team is comprised of highly experienced professionals dedicated to excellence in every aspect of chip manufacturing, from sourcing ingredients to final packaging. Additionally, we place a strong emphasis on sustainability, integrating eco-friendly practices into all stages of our production process. This includes using sustainable ingredients, minimizing waste, and reducing our carbon footprint. By choosing Shri Foods, you are not only getting top-quality and innovative chips but also supporting a company that prioritizes environmental responsibility.
+                        At Shri Foods, we stand out in the Snacks manufacturing industry for several reasons. First, our innovation shines through with the introduction of creative and unique flavours that cater to diverse tastes and preferences. Our commitment to quality is second to none, with rigorous quality control measures ensuring that every product meets the highest standards. Our team is comprised of highly experienced professionals dedicated to excellence in every aspect of snack manufacturing, from sourcing ingredients to final packaging. Additionally, we place a strong emphasis on sustainability, integrating eco-friendly practices into all stages of our production process. This includes using sustainable ingredients, minimizing waste, and reducing our carbon footprint. By choosing Shri Foods, you are not only getting top-quality and innovative snacks but also supporting a company that prioritizes environmental responsibility.
                     </p>
                 </div>
 
@@ -70,10 +70,10 @@ const Chips = () => {
 
                         <div className="md:w-1/2">
                             <h1 className="text-xl md:text-2xl lg:text-3xl text-orange-600 mb-6">
-                                Snacks & chips manufacturing
+                                Extruded Snacks Manufacturing
                             </h1>
                             <p className="text-xs md:text-base lg:text-lg text-black mb-6 text-justify">
-                                Shri Foods produces high-quality chips and snacks by sourcing premium ingredients. The process includes slicing, frying or baking, seasoning, and packaging, ensuring a crunchy texture and rich flavor. Advanced quality control measures maintain consistency and freshness. The company is committed to sustainability, using eco-friendly packaging and minimizing waste. Their diverse product range caters to various dietary preferences, including gluten-free and low-sodium options.
+                                Shri Foods produces high-quality Extruded snacks by sourcing premium ingredients. The process includes grinding, baking, seasoning, and packaging, ensuring a crunchy texture and rich flavour. Advanced quality control measures maintain consistency and freshness. The company is committed to sustainability, using eco-friendly packaging and minimizing waste. Their diverse product range caters to various dietary preferences, including gluten-free and low-sodium options.
                             </p>
                         </div>
 
@@ -103,13 +103,13 @@ const Chips = () => {
                                 Custom Solutions
                             </h1>
                             <p className="text-xs md:text-base lg:text-lg text-black mb-6 text-justify">
-                                Looking for a custom chip flavor or a private label option? Our expert team collaborates with you to develop a unique product tailored to your brand’s vision and specific requirements. Whether you're aiming for an innovative taste profile or a distinct packaging design, we ensure your product stands out in the market. Partner with us to create a snack experience that perfectly represents your brand.
+                                Looking for a custom product or a private label option? Our expert team collaborates with you to develop a unique product tailored to your brand’s vision and specific requirements. Whether you're aiming for an innovative taste profile or a distinct packaging design, we ensure your product stands out in the market. Partner with us to create a snack experience that perfectly represents your brand.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16 xl:px-20">
+                {/* <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16 xl:px-20">
                     <h1 className="text-2xl md:text-4xl text-center text-orange-600 mb-8">
                         Frequently Asked Questions
                     </h1>
@@ -138,7 +138,7 @@ const Chips = () => {
                             </div>
                         ))}
                     </div>
-                </div>
+                </div> */}
             </div>
         </React.Fragment>
     )

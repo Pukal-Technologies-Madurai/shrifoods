@@ -111,7 +111,7 @@ const Readytocook = () => {
                     </div>
                 </div>
 
-                <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16 xl:px-20">
+                {/* <div className="max-w-7xl mx-auto px-4 md:px-12 lg:px-16 xl:px-20">
                     <h1 className="text-2xl md:text-4xl text-center text-orange-600 mb-8">
                         Frequently Asked Questions
                     </h1>
@@ -140,7 +140,7 @@ const Readytocook = () => {
                             </div>
                         ))}
                     </div>
-                </div>
+                </div> */}
             </div>
         </React.Fragment>
     )

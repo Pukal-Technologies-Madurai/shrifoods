@@ -24,8 +24,6 @@ import Corn4 from "../images/ring/Wave Puff.png";
 import Corn5 from "../images/ring/Veg Biryani Puff.png";
 import Corn6 from "../images/ring/Surprise Puff.png";
 
-import productBack from "../images/112.png";
-
 const TabContent = ({ items }) => {
     const [expandedItems, setExpandedItems] = useState({});
 
@@ -87,7 +85,7 @@ const Products = () => {
                     description: "Popped wheat is a delightful snack that combines a light, crunchy texture with a rich, nutty flavor. Made from whole wheat grains that are gently heated until they pop, this snack is not only delicious but also packed with fiber and essential nutrients. It's an ideal choice for those seeking a wholesome, satisfying treat that's both nutritious and flavorful",
                     flavor: "Nutty and crunchy.",
                     nutritional: "High in fiber, vitamins, and minerals like iron and magnesium.",
-                    imageSrc: Core1
+                    imageSrc: Core3
                 },
                 {
                     title: "Popped Barley",
@@ -97,35 +95,35 @@ const Products = () => {
                     imageSrc: Core2
                 },
                 {
-                    title: "Popped Pearl Millet (Bajra)",
+                    title: "Popped Pearl Millet",
                     description: "Popped Pearl Millet is a nutritious and delightful snack, offering a unique combination of a light, airy texture with a mildly sweet and earthy flavor. Made from whole pearl millet grains, known for their rich nutrients profile, these grains are carefully heated until they pop. This process not only enhances their natural flavor but also preserves their high fiber, protein, and antioxidant content. Popped pearl millet is an excellent choice for those seeking a wholesome snack that's both gluten-free and packed with health benefits, making it a perfect fit for a modern, health-conscious lifestyle",
                     flavor: "Nutty and crunchy.",
                     nutritional: "High in fiber, vitamins, and minerals like iron and magnesium.",
-                    imageSrc: Core3
+                    imageSrc: Core1
                 },
                 {
-                    title: "Other All Millets",
-                    description: "Popped millets is a delightful snack that combines a light, crunchy texture with a rich, nutty flavor. Made from whole grains that are gently heated until they pop, this snack is not only delicious but also packed with fiber and essential nutrients. It's an ideal choice for those seeking a wholesome, satisfying treat that's both nutritious and flavorful",
+                    title: "Other Value added Millets",
+                    description: "Value added popped millets is a delightful snack that combines a light, crunchy texture with a rich, nutty flavor. Made from whole grains that are gently heated until they pop, this snack is not only delicious but also packed with fiber and essential nutrients. It's an ideal choice for those seeking a wholesome, satisfying treat that's both nutritious and flavorful",
                     flavor: "Nutty and crunchy.",
                     nutritional: "High in fiber, vitamins, and minerals like iron and magnesium.",
                     imageSrc: Core4
                 },
             ]
         },
-        millet: {
+        extruded: {
             items: [
                 {
-                    title: "Pearl Millet Puff (Bajra)",
+                    title: "Pearl Millet Puff",
                     description: "Extruded with finesse using pearl millet flour and a blend of premium grains, these puffs redefine snacking delight. With the ability to take multiple shapes during extrusion, our Bajra Puff offers a playful and customizable experience. Immerse yourself in a world of lightness and crunch, each bite a fusion of flavor and nutrients-rich goodness.",
                     imageSrc: Millet1
                 },
                 {
-                    title: "Sorghum Puff (Jowar)",
+                    title: "Jowar Puff",
                     description: "Extruded with precision using premium jowar (sorghum) flour and a blend of carefully selected grains, our Jowar Puff is a delightful twist on traditional snacking. These puffs redefine the art of snacking delight, taking on various shapes during extrusion for a playful and customizable experience. Immerse yourself in a world of airy lightness and satisfying crunch, where each bite is a fusion of distinct flavors and nutrients-rich goodness. Elevate your snacking routine with our Jowar Puff, a wholesome choice that combines quality, creativity, and a burst of health in every delicious puffs",
                     imageSrc: Millet2
                 },
                 {
-                    title: "Finger Millet Puff (Ragi)",
+                    title: "Finger Millet Puff",
                     description: "Extruded with expertise using nutrients-packed ragi (finger millet) flour and a blend of premium grains, our Ragi Puffs redefine snacking excellence. Taking on various enticing shapes during extrusion, these puffs offer a playful and customizable experience for every palate. Immerse yourself in a world of satisfying lightness and crunch, where each bite is a harmonious fusion of flavors and wholesome goodness. Elevate your snacking journey with our Ragi Puffs, a delightful choice that marries quality, innovation, and health in every delicious piece. Savor the perfect balance of taste and nutritions with each uniquely shaped puff.",
                     imageSrc: Millet4
                 },
@@ -134,10 +132,6 @@ const Products = () => {
                     description: "Multi Millet Puffs redefine the essence of wholesome snacking. Extruded with expertise and care, these puffs showcase a symphony of textures and flavors. With the ability to take on diverse shapes during extrusion, each bite offers a playful and customizable experience. Immerse yourself in the delightful world of lightness and satisfying crunch, where the fusion of distinct millet flavors and nutrients-packed goodness creates a truly exceptional snacking adventure. Elevate your palate with our Multi Millet Puffs — a celebration of quality, diversity, and health in every delicious and uniquely shaped puff.",
                     imageSrc: Millet5
                 },
-            ]
-        },
-        corn: {
-            items: [
                 {
                     title: "Corn Ring Puff",
                     description: "Delight in the playful and versatile snacking experience with our Rings Puff. Expertly crafted to perfection, these airy and crunchy puffs are a culinary marvel. Created with a blend of premium ingredients, the Round Puff takes on a circular form during extrusion, adding a touch of whimsy to your snacking routine. Immerse yourself in the lightness and satisfying crunch of each perfectly rounded bite. Versatile and customizable, these puffs offer a delightful canvas for your taste buds. Elevate your snacking moments with our Rings Puff — a symphony of shape, texture, and flavor that transforms every bite into a memorable experience.",
@@ -203,9 +197,10 @@ const Products = () => {
                     nutritional: "High in fiber, vitamins, and minerals like iron and magnesium.",
                     imageSrc: Core5
                 },
-            ]
+            ],
+            name: "Core Filled"
         },
-    }
+    };
 
     return (
         <Layout>
@@ -236,7 +231,7 @@ const Products = () => {
                     <div className="mb-6">
                         <div className="flex justify-center items-center">
                             <nav className="flex flex-wrap">
-                                {["popped", "millet", "corn", "bars", "core"].map((tab) => (
+                                {["popped", "extruded", "bars", "core"].map((tab) => (
                                     <button
                                         key={tab}
                                         className={`py-4 px-2 md:px-8 lg:px-16 border-b-2 rounded-2xl font-medium text-base sm:text-lg lg:text-2xl ${activeTab === tab
@@ -245,7 +240,7 @@ const Products = () => {
                                             }`}
                                         onClick={() => setActiveTab(tab)}
                                     >
-                                        {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                                        {tabs[tab].name || tab.charAt(0).toUpperCase() + tab.slice(1)}
                                     </button>
                                 ))}
                             </nav>
