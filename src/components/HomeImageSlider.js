@@ -83,13 +83,13 @@ const HomeImageSlider = ({ images }) => {
 
             {/* Navigation Arrows */}
             <a
-                className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white text-4xl font-bold px-2 py-6 cursor-pointer bg-black/30 hover:bg-black/70 z-10"
+                className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white text-4xl font-bold px-2 py-6 cursor-pointer bg-black/10 hover:bg-black/40 z-10"
                 onClick={prevSlide}
             >
                 &#10094;
             </a>
             <a
-                className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white text-4xl font-bold px-2 py-6 cursor-pointer bg-black/30 hover:bg-black/70 z-10"
+                className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white text-4xl font-bold px-2 py-6 cursor-pointer bg-black/10 hover:bg-black/40 z-10"
                 onClick={nextSlide}
             >
                 &#10095;

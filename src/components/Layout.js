@@ -8,10 +8,7 @@ const Layout = ({ children }) => {
     return (
         <div className="flex flex-col min-h-screen">
             <Helmet>
-                <meta
-                    name="google-site-verification"
-                    content="google21f3a0c7251c4da6"
-                />
+                <meta name="google-site-verification" content="d8BOjIuImgXJ5HHfD2u9Ct1Q52xyN0qT6URgP9x7pO8" />
                 <title>Shri Foods India</title>
             </Helmet>
             <Navbar />
