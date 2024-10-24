@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import Core1 from "../images/Pop/popped-wheat.jpg";
 import Core2 from "../images/Pop/popped-barley.jpg";
 import Core3 from "../images/Pop/popped-pearl-millet.jpg";
-import Core4 from "../images/Pop/other-millets.webp";
+import Core4 from "../images/Pop/value-added-millets.jpg";
 import Core5 from "../images/core/Core Filled snacks.webp";
 
 import Bar1 from "../images/core/Protein Bars.webp";
@@ -19,54 +19,35 @@ import Millet5 from "../images/Millet/Multi Millet Puff.webp";
 
 import Corn1 from "../images/ring/Rings Puff.png";
 import Corn2 from "../images/ring/Corn Puff.png";
-import Corn3 from "../images/ring/Stick Puff.png";
+import Corn3 from "../images/contract/multi-shapes.png";
 import Corn4 from "../images/ring/Wave Puff.png";
 import Corn5 from "../images/ring/Veg Biryani Puff.png";
 import Corn6 from "../images/ring/Surprise Puff.png";
 
 const TabContent = ({ items }) => {
-    const [expandedItems, setExpandedItems] = useState({});
-
-    const toggleExpand = (index) => {
-        setExpandedItems((prev) => ({
-            ...prev,
-            [index]: !prev[index],
-        }));
-    };
-
-    const maxDescriptionLength = 300;
 
     return (
         <div className="w-full max-w-screen-lg mx-auto">
             {items.map((item, index) => (
-                <div key={index} className="mb-8 flex flex-col md:flex-row items-center relative">
+                <div key={index} className="mb-8 flex flex-col md:flex-row items-start relative">
                     <div className="w-full md:w-1/2 mb-4 md:mb-0 md:mr-4">
                         <img
                             src={item.imageSrc}
                             alt={item.title}
-                            className={`w-full h-auto max-h-96 bg-white rounded-lg shadow-lg ${[Corn1, Corn2, Corn3, Corn4, Corn5, Corn6, Core1, Core2, Core3].includes(item.imageSrc) ? "object-contain" : "object-cover"
-                                }`}
+                            className={`w-full h-auto max-h-96 bg-white rounded-lg shadow-lg ${[Corn1, Corn2, Corn3, Corn4, Corn5, Corn6, Core1, Core2, Core3].includes(item.imageSrc)
+                                ? "object-contain p-12"
+                                : "object-cover"
+                                }`
+                            }
                         />
                     </div>
-                    <div className="w-full md:w-1/2 px-8 relative pt-16">
+                    <div className="w-full md:w-1/2 px-8 relative pt-8">
                         <h3 className="absolute top-0 left-0 text-[20px] px-8 sm:text-[20px] font-semibold text-orange-600">
                             {item.title.toUpperCase()}
                         </h3>
-                        <p className="text-black text-base sm:text-lg text-justify">
-                            {expandedItems[index]
-                                ? item.description
-                                : item.description.length > maxDescriptionLength
-                                    ? `${item.description.substring(0, maxDescriptionLength)}...`
-                                    : item.description}
+                        <p className="text-black text-base sm:text-lg text-justify leading-loose">
+                            {item.description}
                         </p>
-                        {item.description.length > maxDescriptionLength && (
-                            <button
-                                onClick={() => toggleExpand(index)}
-                                className="text-orange-600 font-semibold hover:underline"
-                            >
-                                {expandedItems[index] ? "Show Less" : "Show More"}
-                            </button>
-                        )}
                     </div>
                 </div>
             ))}
@@ -82,7 +63,7 @@ const Products = () => {
             items: [
                 {
                     title: "Popped Wheat",
-                    description: "Popped wheat is a delightful snack that combines a light, crunchy texture with a rich, nutty flavor. Made from whole wheat grains that are gently heated until they pop, this snack is not only delicious but also packed with fiber and essential nutrients. It's an ideal choice for those seeking a wholesome, satisfying treat that's both nutritious and flavorful",
+                    description: "Popped wheat is a delightful snack that combines a light, crunchy texture with a rich, nutty flavor. Made from whole wheat grains that are gently heated until they pop, this snack is not only delicious but also packed with fiber and essential nutrients. It's an ideal choice for those seeking a wholesome, satisfying treat that's both nutritious and flavor.",
                     flavor: "Nutty and crunchy.",
                     nutritional: "High in fiber, vitamins, and minerals like iron and magnesium.",
                     imageSrc: Core3
@@ -96,14 +77,14 @@ const Products = () => {
                 },
                 {
                     title: "Popped Pearl Millet",
-                    description: "Popped Pearl Millet is a nutritious and delightful snack, offering a unique combination of a light, airy texture with a mildly sweet and earthy flavor. Made from whole pearl millet grains, known for their rich nutrients profile, these grains are carefully heated until they pop. This process not only enhances their natural flavor but also preserves their high fiber, protein, and antioxidant content. Popped pearl millet is an excellent choice for those seeking a wholesome snack that's both gluten-free and packed with health benefits, making it a perfect fit for a modern, health-conscious lifestyle",
+                    description: "Popped Pearl Millet is a nutritious and delightful snack, offering a unique combination of a light, airy texture with a mildly sweet and earthy flavor. Made from whole pearl millet grains, known for their rich nutrients profile, these grains are carefully heated until they pop. This process not only enhances their natural flavor but also preserves their high fiber, protein, and antioxidant content. Popped pearl millet is an excellent choice for those seeking a wholesome snack that's both gluten-free and packed with health benefits, making it a perfect fit for a modern, health-conscious lifestyle.",
                     flavor: "Nutty and crunchy.",
                     nutritional: "High in fiber, vitamins, and minerals like iron and magnesium.",
                     imageSrc: Core1
                 },
                 {
                     title: "Other Value added Millets",
-                    description: "Value added popped millets is a delightful snack that combines a light, crunchy texture with a rich, nutty flavor. Made from whole grains that are gently heated until they pop, this snack is not only delicious but also packed with fiber and essential nutrients. It's an ideal choice for those seeking a wholesome, satisfying treat that's both nutritious and flavorful",
+                    description: "Value added popped millets is a delightful snack that combines a light, crunchy texture with a rich, nutty flavor. Made from whole grains that are gently heated until they pop, this snack is not only delicious but also packed with fiber and essential nutrients. It's an ideal choice for those seeking a wholesome, satisfying treat that's both nutritious and flavor.",
                     flavor: "Nutty and crunchy.",
                     nutritional: "High in fiber, vitamins, and minerals like iron and magnesium.",
                     imageSrc: Core4
@@ -119,7 +100,7 @@ const Products = () => {
                 },
                 {
                     title: "Jowar Puff",
-                    description: "Extruded with precision using premium jowar (sorghum) flour and a blend of carefully selected grains, our Jowar Puff is a delightful twist on traditional snacking. These puffs redefine the art of snacking delight, taking on various shapes during extrusion for a playful and customizable experience. Immerse yourself in a world of airy lightness and satisfying crunch, where each bite is a fusion of distinct flavors and nutrients-rich goodness. Elevate your snacking routine with our Jowar Puff, a wholesome choice that combines quality, creativity, and a burst of health in every delicious puffs",
+                    description: "Extruded with precision using premium jowar flour and a blend of carefully selected grains, our Jowar Puff is a delightful twist on traditional snacking. These puffs redefine the art of snacking delight, taking on various shapes during extrusion for a playful and customizable experience. Immerse yourself in a world of airy lightness and satisfying crunch, where each bite is a fusion of distinct flavors and nutrients-rich goodness. Elevate your snacking routine with our Jowar Puff, a wholesome choice that combines quality, creativity, and a burst of health in every delicious puffs.",
                     imageSrc: Millet2
                 },
                 {
@@ -159,7 +140,7 @@ const Products = () => {
                 },
                 {
                     title: "Corn Multi-Shapes Puff",
-                    description: "Savor the medley of flavors with our Mixed Corn Puff — a delightful blend of golden corn goodness in every bite. Crafted with precision and care, these puffs offer a perfect balance of sweet and savory notes. Extruded with a mix of premium corn varieties, each puff delivers a harmonious blend of textures and flavors. Immerse yourself in the light and crispy crunch that defines our Mixed Corn Puff, showcasing the diversity of corn in every mouthful. Versatile and irresistible, this snack is a celebration of corn's natural sweetness and snack-worthy appeal. Elevate your snacking experience with the flavorful symphony of our Mixed Corn Puff.",
+                    description: "Savor the medley of flavors with our Mixed Corn Puff — a delightful blend of golden corn goodness in every bite. Crafted with precision and care, these puffs offer a perfect balance of sweet and savory notes. Extruded with a mix of premium corn varieties, each puff delivers a harmonious blend of textures and flavors. Immerse yourself in the light and crispy crunch that defines our Mixed Corn Puff, showcasing the diversity of corn in every mouthful. Versatile and irresistible, this snack is a celebration of corn's natural sweetness and snack-worthy appeal. Elevate your snacking experience with the flavor symphony of our Mixed Corn Puff.",
                     imageSrc: Corn3
                 },
             ]

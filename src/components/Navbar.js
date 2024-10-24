@@ -53,7 +53,7 @@ const Navbar = () => {
 
                     {/* Search Input - Desktop and Tablet */}
                     <div className="hidden md:flex items-center">
-                        <div className="relative">
+                        <div className="relative hidden">
                             <input
                                 type="text"
                                 placeholder="Search..."
@@ -103,7 +103,7 @@ const Navbar = () => {
                 </div>
                 {/* Search Input - Mobile */}
                 <div className="px-2 pt-2 pb-3">
-                    <div className="relative">
+                    <div className="relative hidden">
                         <input
                             type="text"
                             placeholder="Search..."

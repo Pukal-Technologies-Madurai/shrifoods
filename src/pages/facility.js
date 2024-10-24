@@ -20,7 +20,7 @@ import AirPuff from "../images/facility/Air Puff Gun.webp";
 const TabContent = ({ items }) => (
     <div className="flex flex-col space-y-12 items-center">
         {items.map((item, index) => (
-            <div key={index} className="flex flex-col md:flex-row items-center justify-center max-w-4xl w-full">
+            <div key={index} className="flex flex-col md:flex-row items-start max-w-4xl w-full">
                 <div className="w-full md:w-1/2 mb-4 md:mb-0">
                     {item.videoSrc ? (
                         <iframe
@@ -43,7 +43,7 @@ const TabContent = ({ items }) => (
                     <h3 className="text-xl md:text-2xl font-semibold mb-2 text-orange-600">
                         {item.title.toUpperCase()}
                     </h3>
-                    <p className="text-xs md:text-sm text-black text-justify">
+                    <p className="text-base sm:text-lg text-justify leading-loose">
                         {item.description}
                     </p>
                 </div>

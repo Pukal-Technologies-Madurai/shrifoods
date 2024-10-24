@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ChevronDown, ChevronUp, Zap, Leaf, Beaker, Shield } from "lucide-react";
 import contract_3 from "../images/contract/contract_3.png";
 import contract_4 from "../images/contract/contract_4.png";
+import Bar1 from "../images/core/Protein Bars.webp";
 
 const Energybar = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -79,7 +80,7 @@ const Energybar = () => {
 
                         <div className="md:w-1/2 mb-8 md:mb-0 md:pl-12">
                             <img
-                                src={contract_3}
+                                src={Bar1}
                                 alt="Sustainability Initiatives"
                                 className="rounded-lg shadow-xl"
                             />
@@ -108,9 +109,9 @@ const Energybar = () => {
                                 <li><strong>Bulk Orders:</strong> Whether you need a small batch or a large production run, we've got you covered.</li>
                                 <li><strong>Branding Opportunities:</strong> Elevate your brand with custom packaging and labeling options.</li>
                             </ul>
-                            <button className="mt-8 bg-orange-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-orange-700 transition duration-300">
+                            {/* <button className="mt-8 bg-orange-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-orange-700 transition duration-300">
                                 Contact Us
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </div>

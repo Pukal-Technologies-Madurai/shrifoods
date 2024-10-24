@@ -51,7 +51,7 @@ const Home = () => {
                     </div>
 
                     <div className="w-full lg:w-1/2 text-center lg:text-left">
-                        <h2 className="text-4xl md:text-5xl font-extrabold text-orange-600 mb-6 leading-tight">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-orange-600 mb-6">
                             FARM TO FORK
                         </h2>
                         <p className="text-xl md:text-2xl font-bold text-gray-700 mb-4">
@@ -72,8 +72,8 @@ const Home = () => {
 
             <div className="relative py-10 md:py-12 bg-gradient-to-r from-orange-100 to-yellow-100">
                 <div className="max-w-4xl mx-auto px-4 text-center">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-orange-600 mb-6 leading-tight">
-                        State-of-the-Art Manufacturing Facility
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-orange-600 mb-6">
+                        {`State-of-the-Art Manufacturing Facility`.toUpperCase()}
                     </h2>
                     <button onClick={() => { navigate("/facility") }} className="bg-white text-orange-500 text-base md:text-lg font-semibold py-3 px-8 rounded-full hover:bg-green-600 hover:text-white transition duration-300">
                         Check our Facilities

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp, CheckCircle, Zap, Leaf, Beaker, Shield } from "lucide-react";
-import contract_1 from "../images/contract/contract_1.png"
+import contract_1 from "../images/contract/multi-shapes.png"
 import contract_2 from "../images/contract/contract_2.png"
 
 const Chips = () => {
@@ -81,7 +81,7 @@ const Chips = () => {
                             <img
                                 src={contract_1}
                                 alt="Sustainability Initiatives"
-                                className="rounded-lg shadow-xl"
+                                className="rounded-lg shadow-xl p-12 bg-white"
                             />
                         </div>
                     </div>
