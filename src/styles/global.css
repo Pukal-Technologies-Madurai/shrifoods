@@ -3,25 +3,26 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar {
-    width: 15px;
+  /* width: 15px; */
+  display: none;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
-    background: #f97316;
-}
+/* ::-webkit-scrollbar-track {
+  background: #f97316;
+} */
 
 /* Handle */
-::-webkit-scrollbar-thumb {
-    background: #FEF8C4;
-}
+/* ::-webkit-scrollbar-thumb {
+  background: #fef8c4;
+} */
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
     background: #ff984f;
 }
 
 * {
     scrollbar-width: thin;
     scrollbar-color: #f97316 #FEF8C4;
-}
+} */
